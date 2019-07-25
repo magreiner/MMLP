@@ -1,0 +1,63 @@
+version: '3'
+
+services:
+  frontend:
+    build:
+      context: frontend/
+      dockerfile: Dockerfile
+    networks:
+      - MIP_Network
+    ports:
+      - 80:9080
+
+  backend:
+    build:
+      context: backend/
+      dockerfile: Dockerfile
+    networks:
+      - MIP_Network
+    ports:
+      - 8000:8000
+    volumes:
+      - /data:/data
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+
+# Automatic Certificate Management
+# Source: https://github.com/evertramos/docker-compose-letsencrypt-nginx-proxy-companion
+# Nginx auto-configuration
+# https://github.com/jwilder/nginx-proxy
+# update template with:
+# curl https://raw.githubusercontent.com/jwilder/nginx-proxy/master/nginx.tmpl > /opt/docker/nginx/nginx.tmpl
+
+#  nginx-proxy:
+#    image: jwilder/nginx-proxy
+#    container_name: nginx-proxy
+#    ports:
+#      - "80:80"
+#      - "443:443"
+#    volumes:
+#      - ./nginx-data/conf:/etc/nginx/conf.d
+#      - ./nginx-data/vhost:/etc/nginx/vhost.d
+#      - ./nginx-data/html:/usr/share/nginx/html
+#      - ./nginx-data/dhparam:/etc/nginx/dhparam
+#      - ./nginx-data/certs:/etc/nginx/certs:ro
+#      - /var/run/docker.sock:/tmp/docker.sock:ro
+#    restart: always
+#
+#  letsencrypt:
+#    image: jrcs/letsencrypt-nginx-proxy-companion
+#    container_name: nginx-proxy-le
+#    depends_on:
+#      - nginx-proxy
+#    volumes:
+#      - ./nginx-data/vhost:/etc/nginx/vhost.d
+#      - ./nginx-data/html:/usr/share/nginx/html
+#      - ./nginx-data/dhparam:/etc/nginx/dhparam:ro
+#      - ./nginx-data/certs:/etc/nginx/certs
+#      - /var/run/docker.sock:/var/run/docker.sock:ro
+#    environment:
+#      - NGINX_PROXY_CONTAINER=nginx-proxy
+#    restart: always
+
+networks:
+  MIP_Network:

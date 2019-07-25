@@ -1,0 +1,1139 @@
+{
+	"version": 1,
+	"collections": [
+		{
+			"id": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+			"name": "MIP Backend",
+			"description": null,
+			"auth": null,
+			"events": null,
+			"variables": [],
+			"order": [],
+			"folders_order": [
+				"c6a64459-4c5e-451b-96a0-530398402a32",
+				"fc50e3ee-ac22-4334-b066-d079dd6480b2",
+				"534b144e-c982-4304-931f-348175b05ab7",
+				"1fddab70-d71d-4607-ad9e-f4b97de695ac",
+				"50eb385f-16e5-40e8-84da-53731d6f08f2",
+				"42ec763c-6486-460c-8707-0597b430435b",
+				"3412c11e-402d-470d-9756-80ef3123f448"
+			],
+			"folders": [
+				{
+					"id": "1fddab70-d71d-4607-ad9e-f4b97de695ac",
+					"name": "compute",
+					"description": null,
+					"auth": null,
+					"events": null,
+					"collection": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"folder": null,
+					"order": [
+						"395f501e-e532-47c2-aad8-e6b16fe8ebe4",
+						"45fdf560-5689-471e-a279-8cfaf9cdf2fd",
+						"0791f42e-fc25-43c6-b3a4-0f76c34a07fa"
+					],
+					"folders_order": [],
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"folderId": "1fddab70-d71d-4607-ad9e-f4b97de695ac"
+				},
+				{
+					"id": "fc50e3ee-ac22-4334-b066-d079dd6480b2",
+					"name": "dataset",
+					"description": null,
+					"auth": null,
+					"events": null,
+					"collection": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"folder": null,
+					"order": [
+						"99a56e0a-f4a4-4555-ac67-11c4fa7d782a",
+						"0afe1676-ef9c-42a8-a2de-7ac0bd17eee6",
+						"e8a7615d-dc62-4448-b2f7-07f122081baa",
+						"521ec640-94ae-46f1-8209-1f29937fa910",
+						"2695b4b0-4893-4d5f-a013-7da660cdd5fd",
+						"a2e7a521-a815-409a-a1bf-6dce6daf418c",
+						"9c968f71-2526-4e18-8f0f-0fe344341496",
+						"2161994d-45a3-44b5-ac54-fd368c65afc9",
+						"84287425-81c4-4458-9fe6-d825774554fc",
+						"ae365d49-17f1-4bb6-a5ff-38b7ed8a112f",
+						"d999da78-8e71-447a-a38d-ee18270800cf",
+						"ee29a38f-f3da-4c51-85c5-1986293551d1",
+						"e3905d2c-9ba5-475d-bad5-0baef4e89a51",
+						"d8970401-b994-4792-9719-6b16a4a5585e"
+					],
+					"folders_order": [],
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"folderId": "fc50e3ee-ac22-4334-b066-d079dd6480b2"
+				},
+				{
+					"id": "42ec763c-6486-460c-8707-0597b430435b",
+					"name": "methods",
+					"description": "",
+					"auth": null,
+					"events": null,
+					"collection": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"folder": null,
+					"order": [
+						"4b9ab9c9-fd43-4419-9313-b55d62987f90",
+						"d4270b6c-7a4f-4d47-bae4-295f05b7ffee",
+						"d3aec9d7-ceaa-4a6b-9576-f26540ba1ac9",
+						"a7d92aa4-5fde-4d1f-b22a-3732593efa85"
+					],
+					"folders_order": [],
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"folderId": "42ec763c-6486-460c-8707-0597b430435b"
+				},
+				{
+					"id": "534b144e-c982-4304-931f-348175b05ab7",
+					"name": "model",
+					"description": null,
+					"auth": null,
+					"events": null,
+					"collection": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"folder": null,
+					"order": [
+						"eea701bb-aa00-45e5-b9c1-e56a8c9ae251",
+						"b9facdc2-5e5b-4fb2-bae4-4993a6240bfc",
+						"b66bc3cb-0ba8-477d-b4a1-96eeff2d263e",
+						"8e877da5-1360-4ecf-846f-f36730c8d476",
+						"35ffdbb0-496c-4cca-86b8-832ea033ffc3",
+						"c0ee47b6-979c-4540-9bd5-ed70f05e0dd5",
+						"a02b0a9e-4521-4c72-a62a-c23001c8e20c",
+						"e6552cf5-da13-44cc-85fd-30bdc3b065f6",
+						"99dd5a95-147b-40a7-aff8-4b87a789eb08"
+					],
+					"folders_order": [],
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"folderId": "534b144e-c982-4304-931f-348175b05ab7"
+				},
+				{
+					"id": "50eb385f-16e5-40e8-84da-53731d6f08f2",
+					"name": "resources",
+					"description": "",
+					"auth": null,
+					"events": null,
+					"collection": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"folder": null,
+					"order": [
+						"ed9192b2-69b0-4641-97c3-3db4eb160d66"
+					],
+					"folders_order": [],
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"folderId": "50eb385f-16e5-40e8-84da-53731d6f08f2"
+				},
+				{
+					"id": "3412c11e-402d-470d-9756-80ef3123f448",
+					"name": "results",
+					"description": "",
+					"auth": null,
+					"events": null,
+					"collection": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"folder": null,
+					"order": [
+						"8e1f4ee7-9ef1-45c7-bb75-b67558d0e8c3",
+						"b23627e7-22b9-40aa-a5f1-760f49e2bd84",
+						"c2fd376d-c30a-41b6-a2a7-805485706c3f"
+					],
+					"folders_order": [],
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"folderId": "3412c11e-402d-470d-9756-80ef3123f448"
+				},
+				{
+					"id": "c6a64459-4c5e-451b-96a0-530398402a32",
+					"name": "snapshots",
+					"description": "",
+					"auth": null,
+					"events": null,
+					"collection": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"folder": null,
+					"order": [
+						"963fecbf-e87e-4c0d-b22b-0ab5a7b889d6",
+						"bf35f72b-cc00-4183-871d-edc813bc658e",
+						"38f34b2d-27e9-402b-9bcc-5c0697d67827",
+						"766302ce-4318-4b58-b62f-6112e797de6c"
+					],
+					"folders_order": [],
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"folderId": "c6a64459-4c5e-451b-96a0-530398402a32"
+				}
+			],
+			"requests": [
+				{
+					"id": "0791f42e-fc25-43c6-b3a4-0f76c34a07fa",
+					"name": "Patient Cohort Upload",
+					"url": "http://localhost:8000/compute/uploadPatientCohort",
+					"description": null,
+					"data": null,
+					"dataMode": "binary",
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"type": "text",
+							"value": "application/gzip"
+						}
+					],
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": "1fddab70-d71d-4607-ad9e-f4b97de695ac",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"headers": "Content-Type: application/gzip\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "0afe1676-ef9c-42a8-a2de-7ac0bd17eee6",
+					"name": "Datasets Count",
+					"url": "http://localhost:8000/datasets/count",
+					"description": null,
+					"data": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": "fc50e3ee-ac22-4334-b066-d079dd6480b2",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "2161994d-45a3-44b5-ac54-fd368c65afc9",
+					"name": "Dataset Versions Paginated",
+					"url": "http://localhost:8000/datasets/04b0750e-5d74-4bd7-b9a5-60c64a68a0db/versions?limit=1&offset=2&sortby=created&order=desc",
+					"description": null,
+					"data": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "offset",
+							"value": "2"
+						},
+						{
+							"key": "sortby",
+							"value": "created"
+						},
+						{
+							"key": "order",
+							"value": "desc"
+						}
+					],
+					"auth": null,
+					"events": null,
+					"folder": "fc50e3ee-ac22-4334-b066-d079dd6480b2",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "2695b4b0-4893-4d5f-a013-7da660cdd5fd",
+					"name": "Datasets with Limit and Offset Copy",
+					"url": "http://localhost:8000/datasets?limit=2&offset=0&sortby=maintainer&order=asc",
+					"description": null,
+					"data": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "limit",
+							"value": "2"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "sortby",
+							"value": "maintainer"
+						},
+						{
+							"key": "order",
+							"value": "asc"
+						}
+					],
+					"auth": null,
+					"events": null,
+					"folder": "fc50e3ee-ac22-4334-b066-d079dd6480b2",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "35ffdbb0-496c-4cca-86b8-832ea033ffc3",
+					"name": "Model Versions",
+					"url": "http://localhost:8000/models/15177f95-035b-4ac4-9d47-79fb1c873b1d/versions",
+					"description": null,
+					"data": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": "534b144e-c982-4304-931f-348175b05ab7",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "38f34b2d-27e9-402b-9bcc-5c0697d67827",
+					"name": "Remove Snapshot",
+					"url": "http://localhost:8000/snapshots",
+					"description": "",
+					"data": [],
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"description": "",
+							"key": "Content-Type",
+							"name": "Content-Type",
+							"type": "text",
+							"value": "application/json"
+						}
+					],
+					"method": "DELETE",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [],
+					"folder": "c6a64459-4c5e-451b-96a0-530398402a32",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"rawModeData": "{\n\t\"snapshot_id\": \"d24634d9-f8cc-4e65-847a-731c5170ab9b\"\n}",
+					"headers": "Content-Type: application/json\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "395f501e-e532-47c2-aad8-e6b16fe8ebe4",
+					"name": "Train Model and Create Snapshot",
+					"url": "http://localhost:8000/compute/train",
+					"description": "",
+					"data": [],
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"name": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [],
+					"folder": "1fddab70-d71d-4607-ad9e-f4b97de695ac",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"rawModeData": "{\n    \"datasetVersionId\": \"6b50ae6e-7124-473f-b69c-c7ac3d451a53\",\n    \"modelId\": \"716fd090-3ca1-4ce9-991e-8bd0240a828d\",\n    \"modelGitCommit\": \"4aed35c08bee8478d6d81ef4c6c5884fd8676274\",\n    \"snapshotId\": \"\",\n    \"parameters\": {\n        \"name\": \"Model Parameters\",\n        \"variable\": \"parameters\",\n        \"value\": [\n            {\n                \"name\": \"Monitoring\",\n                \"variable\": \"monitoring\",\n                \"value\": [\n                    {\n                        \"name\": \"Monitoring Name\",\n                        \"variable\": \"name\",\n                        \"value\": \"Visdom\"\n                    },\n                    {\n                        \"name\": \"Container Name\",\n                        \"variable\": \"container\",\n                        \"value\": \"visdom-docker\"\n                    },\n                    {\n                        \"name\": \"Monitoring Port\",\n                        \"variable\": \"port\",\n                        \"value\": 8080\n                    }\n                ]\n            },\n            {\n                \"name\": \"Preprocessing\",\n                \"variable\": \"preprocessing\",\n                \"value\": [\n                    {\n                        \"name\": \"Generic\",\n                        \"variable\": \"generic\",\n                        \"value\": [\n                            {\n                                \"name\": \"DICOM -> NRRD\",\n                                \"variable\": \"step\",\n                                \"value\": [\n                                    {\n                                        \"name\": \"Container\",\n                                        \"variable\": \"container\",\n                                        \"value\": \"dicom2nrrd\"\n                                    },\n                                    {\n                                        \"name\": \"Parameter\",\n                                        \"variable\": \"parameter\",\n                                        \"value\": [\n                                            {\n                                                \"name\": \"Size\",\n                                                \"variable\": \"size\",\n                                                \"value\": 512\n                                            }\n                                        ]\n                                    }\n                                ]\n                            },\n                            {\n                                \"name\": \"NRRD -> NUMPY\",\n                                \"variable\": \"step\",\n                                \"value\": [\n                                    {\n                                        \"name\": \"Container\",\n                                        \"variable\": \"container\",\n                                        \"value\": \"nrrd2numpy\"\n                                    },\n                                    {\n                                        \"name\": \"Parameter\",\n                                        \"variable\": \"parameter\",\n                                        \"value\": [\n                                            {\n                                                \"name\": \"Size\",\n                                                \"variable\": \"size\",\n                                                \"value\": 512\n                                            }\n                                        ]\n                                    }\n                                ]\n                            },\n                            {\n                                \"name\": \"Metadata Extraction and Preparation\",\n                                \"variable\": \"step\",\n                                \"value\": [\n                                    {\n                                        \"name\": \"Container\",\n                                        \"variable\": \"container\",\n                                        \"value\": \"extract_meta\"\n                                    },\n                                    {\n                                        \"name\": \"Parameter\",\n                                        \"variable\": \"parameter\",\n                                        \"value\": [\n                                            {\n                                                \"name\": \"Size\",\n                                                \"variable\": \"size\",\n                                                \"value\": 512\n                                            }\n                                        ]\n                                    }\n                                ]\n                            }\n                        ]\n                    },\n                    {\n                        \"name\": \"Augmentation\",\n                        \"variable\": \"augmentation\",\n                        \"value\": []\n                    },\n                    {\n                        \"name\": \"Custom Preprocessing\",\n                        \"variable\": \"preprocessing\",\n                        \"value\": []\n                    }\n                ]\n            },\n            {\n                \"name\": \"Translation\",\n                \"variable\": \"translation\",\n                \"value\": [\n                    {\n                        \"name\": \"Inference\",\n                        \"variable\": \"inference\",\n                        \"value\": \"test\"\n                    },\n                    {\n                        \"name\": \"Training\",\n                        \"variable\": \"training\",\n                        \"value\": \"train-test\"\n                    }\n                ]\n            },\n            {\n                \"name\": \"Hyper Parameters\",\n                \"variable\": \"hyper_parameters\",\n                \"value\": [\n                    {\n                        \"name\": \"Hidden System Settings\",\n                        \"variable\": \"System_Settings_Hidden\",\n                        \"value\": []\n                    },\n                    {\n                        \"name\": \"Training\",\n                        \"variable\": \"training\",\n                        \"value\": [\n                            {\n                                \"name\": \"Batch Size\",\n                                \"variable\": \"BATCH_SIZE\",\n                                \"value\": 7\n                            },\n                            {\n                                \"name\": \"Number of Epochs\",\n                                \"variable\": \"EPOCHS\",\n                                \"value\": 0\n                            },\n                            {\n                                \"name\": \"Learning Rate\",\n                                \"variable\": \"LEARNING_RATE\",\n                                \"value\": 0.001\n                            }\n                        ]\n                    }\n                ]\n            }\n        ]\n    }\n}",
+					"headers": "Content-Type: application/json\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "45fdf560-5689-471e-a279-8cfaf9cdf2fd",
+					"name": "Apply Method and Create Result",
+					"url": "http://localhost:8000/compute/apply",
+					"description": "",
+					"data": [],
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"description": "",
+							"key": "Content-Type",
+							"name": "Content-Type",
+							"type": "text",
+							"value": "application/json"
+						}
+					],
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [],
+					"folder": "1fddab70-d71d-4607-ad9e-f4b97de695ac",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"rawModeData": "{\n    \"method_id\": \"1a463a99-73b4-400f-860c-add2a3c9a751\",\n    \"issuer\": \"Matthias Greiner\",\n    \"patient_cohort_location\": {\n\t    \"temp_dir\": \"/tmp/tmpl61tcsw2\",\n\t    \"current_dir\": \"/tmp/tmpl61tcsw2/archive\"\n\t}\n}",
+					"headers": "Content-Type: application/json\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "4b9ab9c9-fd43-4419-9313-b55d62987f90",
+					"name": "Create Method",
+					"url": "http://localhost:8000/methods",
+					"description": "",
+					"data": [],
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"name": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [],
+					"folder": "42ec763c-6486-460c-8707-0597b430435b",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"rawModeData": "{\n\t\"name\": \"Best Classification Method\",\n\t\"description\": \"Best thing ever made\",\n\t\"model_snapshot_id\": \"8f1730ef-7b4e-48e8-a5ca-6b22fb0d4e88\"\n}",
+					"headers": "Content-Type: application/json\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "521ec640-94ae-46f1-8209-1f29937fa910",
+					"name": "Datasets with Limit and Offset",
+					"url": "http://localhost:8000/datasets?limit=2&offset=0&sortby=maintainer&order=desc",
+					"description": null,
+					"data": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "limit",
+							"value": "2"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "sortby",
+							"value": "maintainer"
+						},
+						{
+							"key": "order",
+							"value": "desc"
+						}
+					],
+					"auth": null,
+					"events": null,
+					"folder": "fc50e3ee-ac22-4334-b066-d079dd6480b2",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "766302ce-4318-4b58-b62f-6112e797de6c",
+					"name": "Count Snapshots",
+					"url": "http://localhost:8000/snapshots/count",
+					"description": "",
+					"data": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [],
+					"folder": "c6a64459-4c5e-451b-96a0-530398402a32",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "84287425-81c4-4458-9fe6-d825774554fc",
+					"name": "Dataset Version Count",
+					"url": "http://localhost:8000/datasets/3b9dbac6-9aa6-454a-adfe-bd79d16fec64/versions/count",
+					"description": null,
+					"data": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": "fc50e3ee-ac22-4334-b066-d079dd6480b2",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "8e1f4ee7-9ef1-45c7-bb75-b67558d0e8c3",
+					"name": "List Results",
+					"url": "http://localhost:8000/results",
+					"description": "",
+					"data": null,
+					"dataMode": null,
+					"headerData": [
+						{
+							"description": "",
+							"key": "Content-Type",
+							"name": "Content-Type",
+							"type": "text",
+							"value": "application/json"
+						}
+					],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [],
+					"folder": "3412c11e-402d-470d-9756-80ef3123f448",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"headers": "Content-Type: application/json\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "8e877da5-1360-4ecf-846f-f36730c8d476",
+					"name": "Model Import",
+					"url": "http://localhost:8000/models",
+					"description": null,
+					"data": [],
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"type": "text",
+							"value": "application/json"
+						}
+					],
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": "534b144e-c982-4304-931f-348175b05ab7",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"rawModeData": "{\n\t\"source_url\": \"git@github.com:magreiner/unet-docker.git\",\n\t\"name\": \"Mega Model\"\n}",
+					"headers": "Content-Type: application/json\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "963fecbf-e87e-4c0d-b22b-0ab5a7b889d6",
+					"name": "List Snapshots",
+					"url": "http://localhost:8000/snapshots",
+					"description": "",
+					"data": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [],
+					"folder": "c6a64459-4c5e-451b-96a0-530398402a32",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "99a56e0a-f4a4-4555-ac67-11c4fa7d782a",
+					"name": "Dataset Collection",
+					"url": "http://localhost:8000/datasets",
+					"description": null,
+					"data": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": "fc50e3ee-ac22-4334-b066-d079dd6480b2",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "99dd5a95-147b-40a7-aff8-4b87a789eb08",
+					"name": "Model Version Parameters",
+					"url": "http://localhost:8000/models/15177f95-035b-4ac4-9d47-79fb1c873b1d/versions/7413b17814fce8e555a2e494db4d6a2ccc003fd4/parameters",
+					"description": null,
+					"data": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": "534b144e-c982-4304-931f-348175b05ab7",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "9c968f71-2526-4e18-8f0f-0fe344341496",
+					"name": "Dataset Versions",
+					"url": "http://localhost:8000/datasets/8a3ed58a-28e8-4064-88be-1100f6bb56ad/versions",
+					"description": null,
+					"data": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": "fc50e3ee-ac22-4334-b066-d079dd6480b2",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "a02b0a9e-4521-4c72-a62a-c23001c8e20c",
+					"name": "Model Versions Count",
+					"url": "http://localhost:8000/models/d2e3d7e0-1268-4ac6-a68f-be981617acf1/versions/count",
+					"description": null,
+					"data": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": "534b144e-c982-4304-931f-348175b05ab7",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "a2e7a521-a815-409a-a1bf-6dce6daf418c",
+					"name": "Datasets with Limit",
+					"url": "http://localhost:8000/datasets?limit=2",
+					"description": null,
+					"data": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "limit",
+							"value": "2"
+						}
+					],
+					"auth": null,
+					"events": null,
+					"folder": "fc50e3ee-ac22-4334-b066-d079dd6480b2",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "a7d92aa4-5fde-4d1f-b22a-3732593efa85",
+					"name": "Method Count",
+					"url": "http://localhost:8000/methods/count",
+					"description": "",
+					"data": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [],
+					"folder": "42ec763c-6486-460c-8707-0597b430435b",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "ae365d49-17f1-4bb6-a5ff-38b7ed8a112f",
+					"name": "Dataset Versions Upload",
+					"url": "http://localhost:8000/datasets/76ccd2d5-77c2-47d1-b7e6-a83ffffb4561/versions",
+					"description": null,
+					"data": [],
+					"dataMode": "binary",
+					"headerData": [],
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": "fc50e3ee-ac22-4334-b066-d079dd6480b2",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "b23627e7-22b9-40aa-a5f1-760f49e2bd84",
+					"name": "Delete Result",
+					"url": "http://localhost:8000/results",
+					"description": "",
+					"data": [],
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"description": "",
+							"key": "Content-Type",
+							"name": "Content-Type",
+							"type": "text",
+							"value": "application/json"
+						}
+					],
+					"method": "DELETE",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [],
+					"folder": "3412c11e-402d-470d-9756-80ef3123f448",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"rawModeData": "{\n\t\"result_id\": \"55306453-a801-4cb0-ad18-43ed2494c7ef\"\n}",
+					"headers": "Content-Type: application/json\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "b66bc3cb-0ba8-477d-b4a1-96eeff2d263e",
+					"name": "Model Count",
+					"url": "http://localhost:8000/models/count",
+					"description": null,
+					"data": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": "534b144e-c982-4304-931f-348175b05ab7",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "b9facdc2-5e5b-4fb2-bae4-4993a6240bfc",
+					"name": "Model Collection Pagination",
+					"url": "http://localhost:8000/models",
+					"description": null,
+					"data": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": "534b144e-c982-4304-931f-348175b05ab7",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "bf35f72b-cc00-4183-871d-edc813bc658e",
+					"name": "List Snapshot, Filtered by Model ID and Commit",
+					"url": "http://localhost:8000/snapshots/8bac0efd-8534-4985-bbce-0723a5ada0ab/version/a29620bf6c77b0a31cac798a6bcd7cd6ecd3f6d4",
+					"description": "",
+					"data": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [],
+					"folder": "c6a64459-4c5e-451b-96a0-530398402a32",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "c0ee47b6-979c-4540-9bd5-ed70f05e0dd5",
+					"name": "Model Versions Limit and Offset",
+					"url": "http://localhost:8000/models/d2e3d7e0-1268-4ac6-a68f-be981617acf1/versions?limit=5&offset=0&sortby=date&order=asc",
+					"description": null,
+					"data": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "limit",
+							"value": "5"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "sortby",
+							"value": "date"
+						},
+						{
+							"key": "order",
+							"value": "asc"
+						}
+					],
+					"auth": null,
+					"events": null,
+					"folder": "534b144e-c982-4304-931f-348175b05ab7",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "c2fd376d-c30a-41b6-a2a7-805485706c3f",
+					"name": "Result Count",
+					"url": "http://localhost:8000/results/count",
+					"description": "",
+					"data": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [],
+					"folder": "3412c11e-402d-470d-9756-80ef3123f448",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "d3aec9d7-ceaa-4a6b-9576-f26540ba1ac9",
+					"name": "Delete Method",
+					"url": "http://localhost:8000/methods",
+					"description": "",
+					"data": [],
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"name": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"method": "DELETE",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [],
+					"folder": "42ec763c-6486-460c-8707-0597b430435b",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"rawModeData": "{\n\t\"method_id\": \"18a0c5d4-9536-4b56-a73f-8c22be864230\"\n}",
+					"headers": "Content-Type: application/json\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "d4270b6c-7a4f-4d47-bae4-295f05b7ffee",
+					"name": "List Methods",
+					"url": "http://localhost:8000/methods",
+					"description": "",
+					"data": null,
+					"dataMode": null,
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"name": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [],
+					"folder": "42ec763c-6486-460c-8707-0597b430435b",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"headers": "Content-Type: application/json\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "d8970401-b994-4792-9719-6b16a4a5585e",
+					"name": "Dataset Delete",
+					"url": "http://localhost:8000/datasets/29e5b701-863e-4daf-b318-7860e0fd244f",
+					"description": null,
+					"data": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "DELETE",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": "fc50e3ee-ac22-4334-b066-d079dd6480b2",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "d999da78-8e71-447a-a38d-ee18270800cf",
+					"name": "Dataset Version",
+					"url": "http://localhost:8000/datasets/76ccd2d5-77c2-47d1-b7e6-a83ffffb4561/versions/53e17154-53ae-4095-8fde-c59b67f1e335",
+					"description": null,
+					"data": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": "fc50e3ee-ac22-4334-b066-d079dd6480b2",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "e3905d2c-9ba5-475d-bad5-0baef4e89a51",
+					"name": "Dataset",
+					"url": "http://localhost:8000/datasets/8a3ed58a-28e8-4064-88be-1100f6bb56ad",
+					"description": null,
+					"data": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": "fc50e3ee-ac22-4334-b066-d079dd6480b2",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "e6552cf5-da13-44cc-85fd-30bdc3b065f6",
+					"name": "Model Update",
+					"url": "http://localhost:8000/models/d2e3d7e0-1268-4ac6-a68f-be981617acf1/update",
+					"description": null,
+					"data": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": "534b144e-c982-4304-931f-348175b05ab7",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "e8a7615d-dc62-4448-b2f7-07f122081baa",
+					"name": "Dataset Upload",
+					"url": "http://localhost:8000/datasets",
+					"description": null,
+					"data": [],
+					"dataMode": "binary",
+					"headerData": [
+						{
+							"key": "Content-Type",
+							"value": "application/gzip",
+							"type": "text"
+						}
+					],
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": "fc50e3ee-ac22-4334-b066-d079dd6480b2",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"headers": "Content-Type: application/gzip\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "ed9192b2-69b0-4641-97c3-3db4eb160d66",
+					"name": "Get Status",
+					"url": "http://localhost:8000/resources",
+					"description": "",
+					"data": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": [],
+					"folder": "50eb385f-16e5-40e8-84da-53731d6f08f2",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "ee29a38f-f3da-4c51-85c5-1986293551d1",
+					"name": "Dataset Version Delete",
+					"url": "http://localhost:8000/datasets/76ccd2d5-77c2-47d1-b7e6-a83ffffb4561/versions/cc60d2da-0bb1-443e-bfeb-55427950ebef",
+					"description": null,
+					"data": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "DELETE",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": "fc50e3ee-ac22-4334-b066-d079dd6480b2",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "eea701bb-aa00-45e5-b9c1-e56a8c9ae251",
+					"name": "Model Collection",
+					"url": "http://localhost:8000/models",
+					"description": null,
+					"data": null,
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": "534b144e-c982-4304-931f-348175b05ab7",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "fdc36827-1b76-40d3-8e5d-dc72609811b8",
+					"headers": "",
+					"pathVariables": {}
+				}
+			]
+		}
+	],
+	"environments": [
+		{
+			"id": "0200e622-9eef-442c-b746-032685118905",
+			"name": "My Workspace - globals",
+			"values": []
+		},
+		{
+			"id": "468ef4cc-1830-4311-aa70-834836f10600",
+			"name": "My Workspace - globals",
+			"values": []
+		},
+		{
+			"id": "5f2a0553-5174-4c12-a408-84c9a490a84c",
+			"name": "My Workspace - globals",
+			"values": []
+		},
+		{
+			"id": "72be5ba5-7653-4b63-8019-92a6ebe69659",
+			"name": "My Workspace - globals",
+			"values": []
+		},
+		{
+			"id": "7f45d69b-02cc-468b-b376-ae16d3b91f41",
+			"name": "My Workspace - globals",
+			"values": []
+		},
+		{
+			"id": "c08496d4-f337-49fb-9c61-1fbe60bd8161",
+			"name": "My Workspace - globals",
+			"values": []
+		},
+		{
+			"id": "d184e8be-2e2d-441c-bd1b-3115aa805ba5",
+			"name": "My Workspace - globals",
+			"values": []
+		},
+		{
+			"id": "d2e1fc6f-20a0-4b86-9489-f93ba3aaaa9b",
+			"name": "My Workspace - globals",
+			"values": []
+		},
+		{
+			"id": "e983ff47-ce6b-4c94-9263-16e01cbc7a8d",
+			"name": "My Workspace - globals",
+			"values": []
+		},
+		{
+			"id": "0a0854d2-3698-4887-a3bf-f08f547797fa",
+			"name": "My Workspace - globals",
+			"values": []
+		}
+	],
+	"headerPresets": [],
+	"globals": []
+}
