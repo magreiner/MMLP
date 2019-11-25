@@ -3,7 +3,7 @@ import uuid from 'uuid/v4'
 import { buildApiUrl } from '@/common'
 
 export async function loadDatasets ({ commit }, query) {
-  console.log(`--- loadDatasets ---`)
+  console.log('--- loadDatasets ---')
   const url = buildApiUrl('datasets')
   const countUrl = `${url}/count`
   // Loading indicator active
@@ -15,7 +15,7 @@ export async function loadDatasets ({ commit }, query) {
     const datasetList = await axios.get(url, { params: query })
     commit('setDatasets', datasetList.data)
   } catch (error) {
-    console.log(`ERROR: Datasets.load_datasets()`)
+    console.log('ERROR: Datasets.load_datasets()')
     console.error(error)
   }
   // Loading indicator inactive

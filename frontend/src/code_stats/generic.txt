@@ -1,0 +1,6 @@
+Number of js functions:  43
+Number of vue functions:  141
+Number of vue files: 41
+Number of js files: 20
+Lines of code vue:   3683 total
+Lines of code js:  1661 total

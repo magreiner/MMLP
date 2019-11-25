@@ -1,13 +1,17 @@
-# Medcial Imaging Platform (MIP) Frontend
+# Medical Machine Learning Platform (MMLP) Frontend
 
 ## Project setup
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compiles and hot-reloads for development 
 ```
+# port 9080:
 npm run serve
+
+# port 80:
+sudo npm run serve80 
 ```
 
 ### Compiles and minifies for production

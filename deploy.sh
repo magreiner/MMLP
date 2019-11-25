@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# (Re-)Start the MIP
+# (Re-)Start the MMLP
 # check logs with:
 # docker-compose logs -f
 
@@ -8,7 +8,7 @@ set -xe
 
 # Build containers to include updates
 # "#################################################################################################################"
-echo "Build MIP Components"
+echo "Build MMLP Components"
 # "#################################################################################################################"
 docker-compose build
 docker-compose pull
@@ -16,9 +16,9 @@ docker-compose pull
 # Stop Platform, if it is already running
 docker-compose down || True
 
-# Deploy MIP
+# Deploy MMLP
 # "#################################################################################################################"
-echo "Deploy MIP"
+echo "Deploy MMLP"
 # "#################################################################################################################"
 docker-compose up
 

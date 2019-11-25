@@ -18,7 +18,7 @@
           fill-height
           row
         >
-        <v-flex>Matthias Greiner&#160;&#160;</v-flex>
+        <v-flex>&copy; Matthias Greiner &#160;&#160;</v-flex>
         <v-flex class="text-xs-center" v-text="statusLog"></v-flex>
         <v-spacer></v-spacer>
         <v-flex class="text-xs-right">
@@ -28,10 +28,10 @@
           <span v-text="hourtime"></span>&#160;&#160;
         </v-flex>
       </v-layout>
-    </v-footer-->
+    </v-footer -->
     <v-footer color="primary" height="auto">
       <v-layout fill-height row>
-        <v-flex>Matthias Greiner&#160;&#160;</v-flex>
+        <v-flex>&copy; Matthias Greiner&#160;&#160;</v-flex>
       </v-layout>
     </v-footer>
   </v-app>

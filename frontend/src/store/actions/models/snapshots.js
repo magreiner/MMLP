@@ -2,7 +2,7 @@ import axios from 'axios'
 import { buildApiUrl } from '@/common'
 
 export async function loadSnapshots ({ commit }, { query, loading }) {
-  console.log(`--- loadSnapshots ---`)
+  console.log('--- loadSnapshots ---')
   const url = buildApiUrl('snapshots')
   const countUrl = `${url}/count`
   // Loading indicator active
@@ -18,7 +18,7 @@ export async function loadSnapshots ({ commit }, { query, loading }) {
     // console.log(`list: ${JSON.stringify(list, null, 2)}`)
     commit('setSnapshots', list.data)
   } catch (error) {
-    console.log(`ERROR: loadSnapshots()`)
+    console.log('ERROR: loadSnapshots()')
     console.error(error)
   }
   // Loading indicator inactive
@@ -26,7 +26,7 @@ export async function loadSnapshots ({ commit }, { query, loading }) {
 }
 
 export async function loadModelVersionSnapshots ({ commit }, { modelId, gitCommitId, query, loading }) {
-  console.log(`--- loadModelVersionSnapshots ---`)
+  console.log('--- loadModelVersionSnapshots ---')
   const url = buildApiUrl(`snapshots/${modelId}/commit/${gitCommitId}`)
   const countUrl = `${url}/count`
   // Loading indicator active
@@ -42,7 +42,7 @@ export async function loadModelVersionSnapshots ({ commit }, { modelId, gitCommi
     // console.log(`list: ${JSON.stringify(list, null, 2)}`)
     commit('setSnapshots', list.data)
   } catch (error) {
-    console.log(`ERROR: loadModelVersionSnapshots()`)
+    console.log('ERROR: loadModelVersionSnapshots()')
     console.error(error)
   }
   // Loading indicator inactive
@@ -51,12 +51,12 @@ export async function loadModelVersionSnapshots ({ commit }, { modelId, gitCommi
 
 export async function deleteSnapshot ({ commit }, snapshotId) {
   console.log('--- action deleteSnapshot ---')
-  const url = buildApiUrl(`snapshots`)
+  const url = buildApiUrl('snapshots')
   commit('setLoading', true)
   try {
     const result = await axios.delete(url, {
       data: {
-        'snapshot_id': snapshotId
+        snapshot_id: snapshotId
       }
     })
     if (result.data.id) {
@@ -81,7 +81,7 @@ export async function downloadSnapshot ({ commit }, snapshotId) {
     // console.log(JSON.stringify(result, null, 2))
   } catch (error) {
     // TODO: Add Alert
-    console.log(`ERROR: downloadSnapshot()`)
+    console.log('ERROR: downloadSnapshot()')
     console.error(error)
   }
   // Loading indicator inactive

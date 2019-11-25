@@ -3,7 +3,7 @@ import mockStatus from '../mock/status'
 // import { buildApiUrl } from '@/common'
 
 export async function loadStatus ({ commit }, query) {
-  console.log(`--- loadStatus ---`)
+  console.log('--- loadStatus ---')
   // console.log(`query: ${JSON.stringify(query, null, 2)}`)
   // Load mock data
   commit('setStatusRunningCount', mockStatus.running.count)

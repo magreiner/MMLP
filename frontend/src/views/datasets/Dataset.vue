@@ -169,7 +169,7 @@ export default {
     },
     dataset () {
       // console.log('hello', this.$route.params.datasetId, this.$store.getters['getDatasetById'](this.$route.params.datasetId))
-      return this.$store.getters['getDatasetById'](this.$route.params.datasetId)
+      return this.$store.getters.getDatasetById(this.$route.params.datasetId)
     }
   },
   methods: {

@@ -12,8 +12,8 @@ import uuid from 'uuid/v4'
 // }
 
 export async function loadMethods ({ commit }, { query }) {
-  console.log(`--- loadMethods ---`)
-  const url = buildApiUrl(`methods`)
+  console.log('--- loadMethods ---')
+  const url = buildApiUrl('methods')
   const countUrl = `${url}/count`
   // Loading indicator active
   commit('setLoading', true)
@@ -27,7 +27,7 @@ export async function loadMethods ({ commit }, { query }) {
     commit('setMethods', list.data)
   } catch (error) {
     commit('setAlert', { show: true, type: 'error', message: `Failed to load Method: ${name}: ${error}` })
-    console.log(`ERROR: loadMethods()`)
+    console.log('ERROR: loadMethods()')
     console.error(error)
   }
   // Loading indicator inactive
@@ -41,15 +41,15 @@ export async function createMethod ({ commit }, { name, description, modelSnapsh
   try {
     // Get the total number of items and retrieve a single page according to the table parameters
     const newMethod = await axios.post(url, {
-      'name': name,
-      'description': description,
-      'model_snapshot_id': modelSnapshotId
+      name: name,
+      description: description,
+      model_snapshot_id: modelSnapshotId
     })
     commit('incrementMethodCount')
     commit('addMethod', newMethod.data)
   } catch (error) {
     commit('setAlert', { show: true, type: 'error', message: `Failed to create Method: ${name}: ${error}` })
-    console.log(`ERROR: createMethod()`)
+    console.log('ERROR: createMethod()')
     console.error(error)
   }
   // Loading indicator inactive
@@ -58,12 +58,12 @@ export async function createMethod ({ commit }, { name, description, modelSnapsh
 
 export async function deleteMethod ({ commit }, methodId) {
   console.log('--- action deleteMethod ---')
-  const url = buildApiUrl(`methods`)
+  const url = buildApiUrl('methods')
   commit('setLoading', true)
   try {
     const result = await axios.delete(url, {
       data: {
-        'method_id': methodId
+        method_id: methodId
       }
     })
     if (result.data.id) {
@@ -125,10 +125,10 @@ export async function uploadPatientCohortAndApplyMethod ({ commit }, { patientCo
         uploadChunk(next)
       } else {
         // We are finished here
-        if (result.data['current_dir']) {
+        if (result.data.current_dir) {
           // upload successful deploy training
           try {
-            const deployUrl = buildApiUrl(`compute/apply`)
+            const deployUrl = buildApiUrl('compute/apply')
             const deployResult = await axios.post(deployUrl, {
               patient_cohort_location: result.data,
               method_id: method.id,

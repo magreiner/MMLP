@@ -13,7 +13,7 @@ export async function loadModels ({ commit }, query) {
     commit('setModels', modelResult.data)
   } catch (error) {
     // TODO: Add Alert
-    console.log(`ERROR: Datasets.load_datasets()`)
+    console.log('ERROR: Datasets.load_datasets()')
     console.error(error)
   }
   // Loading indicator inactive
@@ -67,7 +67,7 @@ export async function updateModel ({ commit }, modelId) {
 }
 
 export async function trainModel ({ commit }, { datasetVersionId, modelId, modelGitCommit, snapshotId, parameters }) {
-  const url = buildApiUrl(`compute/train`)
+  const url = buildApiUrl('compute/train')
   commit('setLoading', true)
   try {
     // Return status object

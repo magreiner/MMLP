@@ -1,0 +1,176 @@
+{
+  "name": "Model Parameters",
+  "variable": "parameters",
+  "value": [
+    {
+      "name": "Monitoring",
+      "variable": "monitoring",
+      "value": [
+        {
+          "name": "Monitoring Name",
+          "variable": "name",
+          "value": "Visdom"
+        },
+        {
+          "name": "Container Name",
+          "variable": "container",
+          "value": "visdom-docker"
+        },
+        {
+          "name": "Monitoring Port",
+          "variable": "port",
+          "value": 8080
+        }
+      ]
+    },
+    {
+      "name": "Pre-Processing",
+      "variable": "pre_processing",
+      "value": [
+        {
+          "name": "Medical Decathlon Preprocessing Container",
+          "variable": "unet-nifti-pre",
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "Custom Preprocessing",
+      "variable": "custom_preprocessing",
+      "value": [
+        {
+          "name": "Generic",
+          "variable": "generic",
+          "value": [
+            {
+              "name": "DICOM -> NRRD",
+              "variable": "step",
+              "value": [
+                {
+                  "name": "Container",
+                  "variable": "container",
+                  "value": "dicom2nrrd"
+                },
+                {
+                  "name": "Parameter",
+                  "variable": "parameter",
+                  "value": [
+                    {
+                      "name": "Size",
+                      "variable": "size",
+                      "value": 512
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "NRRD -> NUMPY",
+              "variable": "step",
+              "value": [
+                {
+                  "name": "Container",
+                  "variable": "container",
+                  "value": "nrrd2numpy"
+                },
+                {
+                  "name": "Parameter",
+                  "variable": "parameter",
+                  "value": [
+                    {
+                      "name": "Size",
+                      "variable": "size",
+                      "value": 512
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Metadata Extraction and Preparation",
+              "variable": "step",
+              "value": [
+                {
+                  "name": "Container",
+                  "variable": "container",
+                  "value": "extract_meta"
+                },
+                {
+                  "name": "Parameter",
+                  "variable": "parameter",
+                  "value": [
+                    {
+                      "name": "Size",
+                      "variable": "size",
+                      "value": 512
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Augmentation",
+          "variable": "augmentation",
+          "value": [
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Post-Processing",
+      "variable": "post_processing",
+      "value": [
+        {
+          "name": "Medical Declathlon Postprocessing Container",
+          "variable": "unet-nifti-post",
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "Translation",
+      "variable": "translation",
+      "value": [
+        {
+          "name": "Inference",
+          "variable": "inference",
+          "value": "test"
+        },
+        {
+          "name": "Training",
+          "variable": "training",
+          "value": "train-test"
+        }
+      ]
+    },
+    {
+      "name": "Hyper Parameters",
+      "variable": "hyper_parameters",
+      "value": [
+        {
+          "name": "Number of Epochs",
+          "variable": "EPOCHS",
+          "value": 0
+        },
+        {
+          "name": "Network Parameters",
+          "variable": "generic",
+          "value": [
+            {
+              "name": "Batch Size",
+              "variable": "BATCH_SIZE",
+              "value": 7
+            },
+            {
+              "name": "Learning Rate",
+              "variable": "LEARNING_RATE",
+              "value": 0.001
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

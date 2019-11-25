@@ -6,7 +6,7 @@
     <v-toolbar-title>
       <router-link to="/" tag="span" style="cursor: pointer">
         <v-icon left dark>home</v-icon>
-        Medical Imaging Platform
+        Medical Machine Learning Platform
       </router-link>
     </v-toolbar-title>
 
@@ -73,7 +73,7 @@ export default {
     // },
     setMode (mode) {
       this.$store.commit('setMode', mode)
-      this.$router.push(`/`)
+      this.$router.push('/')
     }
   }
 }

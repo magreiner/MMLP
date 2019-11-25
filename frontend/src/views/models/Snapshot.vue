@@ -61,7 +61,7 @@
             <v-list-tile>
               <v-list-tile-content>
                 <v-list-tile-title>Model Commit ID:</v-list-tile-title>
-                <v-list-tile-sub-title v-text="modelVersion['git_commit_id']"></v-list-tile-sub-title>
+                <v-list-tile-sub-title v-text="modelVersion.git_commit_id"></v-list-tile-sub-title>
               </v-list-tile-content>
             </v-list-tile>
             <v-spacer></v-spacer>
@@ -163,7 +163,7 @@ export default {
       loading: 'getLoading'
     }),
     modelVersion () {
-      return this.$store.getters['getModelVersionByGitCommitId'](this.providedGitCommitId)
+      return this.$store.getters.getModelVersionByGitCommitId(this.providedGitCommitId)
     },
     formTitle () {
       return this.editedIndex === '' ? 'Add Version' : 'Edit Version'
@@ -205,9 +205,9 @@ export default {
         console.log('--- create Method confirmed ---')
         // console.log(JSON.stringify(this.selectedItem, null, 2))
         await this.$store.dispatch('createMethod', {
-          'name': this.newMethod.name,
-          'description': this.newMethod.description,
-          'modelSnapshotId': this.newMethod.snapshotId
+          name: this.newMethod.name,
+          description: this.newMethod.description,
+          modelSnapshotId: this.newMethod.snapshotId
         })
       } else {
         this.$store.commit('setAlert', { show: true, type: 'error', message: 'Please provide a name and a description for the method!' })

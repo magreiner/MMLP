@@ -149,7 +149,7 @@ export default {
       loading: 'getLoading'
     }),
     model () {
-      return this.$store.getters['getModelById'](this.$route.params.modelId)
+      return this.$store.getters.getModelById(this.$route.params.modelId)
     },
     formTitle () {
       return this.editedIndex === '' ? 'Add Version' : 'Edit Version'

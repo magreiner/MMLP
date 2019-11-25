@@ -92,7 +92,7 @@ export default {
     onTrainWithSnapshot () {
       this.$store.dispatch('loadModelVersionParameters', {
         modelId: this.modelVersion.model,
-        gitCommitId: this.modelVersion['git_commit_id']
+        gitCommitId: this.modelVersion.git_commit_id
       })
       this.step = 4
     },
@@ -100,7 +100,7 @@ export default {
       this.snapshot = null
       this.$store.dispatch('loadModelVersionParameters', {
         modelId: this.modelVersion.model,
-        gitCommitId: this.modelVersion['git_commit_id']
+        gitCommitId: this.modelVersion.git_commit_id
       })
       this.step = 4
     },
@@ -109,7 +109,7 @@ export default {
       this.$store.dispatch('trainModel', {
         datasetVersionId: this.datasetVersion ? this.datasetVersion.id : '',
         modelId: this.modelVersion ? this.modelVersion.model : '',
-        modelGitCommit: this.modelVersion['git_commit_id'],
+        modelGitCommit: this.modelVersion.git_commit_id,
         snapshotId: this.snapshot ? this.snapshot.id : '',
         parameters: treeToParameters(this.modelParameterTree)
       })

@@ -1,0 +1,7 @@
+{
+    "source_url": "git@github.com:magreiner/sample-segmentation-model.git",
+    "maintainer": "Matthias Greiner",
+    "name": "Medical Image Segmentation",
+    "description": "Specialized U-Net for the Medical Declathon Challenge",
+    "license": "Matthias Greiner"
+}

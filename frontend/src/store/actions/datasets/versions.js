@@ -17,7 +17,7 @@ export async function loadDatasetVersions ({ commit }, { datasetId, query }) {
     commit('setDatasetVersionCount', result.data.length)
   } catch (error) {
     // TODO: Show alert error
-    console.log(`ERROR: Datasets.load_datasets()`)
+    console.log('ERROR: Datasets.load_datasets()')
     console.error(error)
   }
   // Loading indicator inactive

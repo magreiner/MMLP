@@ -3,8 +3,8 @@ import axios from 'axios'
 import { buildApiUrl } from '@/common'
 
 export async function loadResults ({ commit }, { query, loading }) {
-  console.log(`--- loadResults ---`)
-  const url = buildApiUrl(`results`)
+  console.log('--- loadResults ---')
+  const url = buildApiUrl('results')
   const countUrl = `${url}/count`
   // Loading indicator active
   if (loading) {
@@ -19,7 +19,7 @@ export async function loadResults ({ commit }, { query, loading }) {
     // console.log(`list: ${JSON.stringify(list, null, 2)}`)
     commit('setResults', list.data)
   } catch (error) {
-    console.log(`ERROR: loadResults()`)
+    console.log('ERROR: loadResults()')
     console.error(error)
   }
   // Loading indicator inactive
@@ -28,12 +28,12 @@ export async function loadResults ({ commit }, { query, loading }) {
 
 export async function deleteResult ({ commit }, resultId) {
   console.log('--- action deleteResult ---')
-  const url = buildApiUrl(`results`)
+  const url = buildApiUrl('results')
   commit('setLoading', true)
   try {
     const result = await axios.delete(url, {
       data: {
-        'result_id': resultId
+        result_id: resultId
       }
     })
     if (result.data.id) {
@@ -58,7 +58,7 @@ export async function downloadResult ({ commit }, resultId) {
     // console.log(JSON.stringify(result, null, 2))
   } catch (error) {
     // TODO: Add Alert
-    console.log(`ERROR: downloadResult()`)
+    console.log('ERROR: downloadResult()')
     console.error(error)
   }
   // Loading indicator inactive

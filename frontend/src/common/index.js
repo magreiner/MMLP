@@ -47,7 +47,7 @@ export function parameterTree (node) {
   if (node.value instanceof Array) {
     // Augment the node with a 'children' attribute, then destructure it to remove the value attribute. This
     // effectively renames value -> children, but returns a new object:
-    let { value, ...result } = { ...node, id: id, children: node.value.map(child => parameterTree(child)) }
+    const { value, ...result } = { ...node, id: id, children: node.value.map(child => parameterTree(child)) }
     return result
   } else return { ...node, id: id }
 }
@@ -58,10 +58,10 @@ export function parameterTree (node) {
  */
 export function treeToParameters (node) {
   if (node.children) {
-    let { id, children, ...result } = { ...node, value: node.children.map(child => treeToParameters(child)) }
+    const { id, children, ...result } = { ...node, value: node.children.map(child => treeToParameters(child)) }
     return result
   } else {
-    let { id, ...result } = node
+    const { id, ...result } = node
     return result
   }
 }

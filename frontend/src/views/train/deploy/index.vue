@@ -65,7 +65,7 @@
           <v-card light>
             <v-toolbar flat dark color="cyan">
               <v-icon>storage</v-icon>
-              <v-toolbar-title>Available Experiment Live Tracking Services for this Model:</v-toolbar-title>
+              <v-toolbar-title>Available Live-Tracking Services for Training this Model:</v-toolbar-title>
 
               <v-spacer></v-spacer>
             </v-toolbar>

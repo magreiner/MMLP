@@ -66,7 +66,7 @@ export default {
         const query = paginationToQuery(this.pagination)
         this.$store.dispatch('loadModelVersionSnapshots', {
           modelId: this.modelVersion.model,
-          gitCommitId: this.modelVersion['git_commit_id'],
+          gitCommitId: this.modelVersion.git_commit_id,
           query: query,
           loading: true
         })
