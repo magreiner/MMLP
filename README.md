@@ -20,7 +20,7 @@ All data objects are stored using UUIDs to avoid conflicts with similar objects.
 
 The configuration is part of the backend, check backend/README and backend/mmlp/config.py
 
-## Requirements
+## System Requirements
 This prototypical platform implementation does support on-premise, hybrid, and public clouds. 
 It is tested on [Amazon Web Services](https://aws.amazon.com/), [Microsoft Azure](https://azure.microsoft.com/), and [Google Cloud](https://cloud.google.com).
 In case you need assistance, please contact me.
@@ -92,7 +92,7 @@ docker-compose up -d
 6. Snapshots for a particular Model Version Overview
 ![Snapshots for a particular Model Version Overview](docu/screenshots/MMLP_DS_SnapshotOverviewForSelectedModelVersion.png)
 
-7. Training Pipeline, please be aware that this pages have dynamic content based on the used model. Therefore this view can vary greatly, depending on the functionality of the used model. Due to copyright, no model is currently included in this prototype.
+7. Training Pipeline, please be aware that these pages have dynamic content based on the used model. Therefore this view can vary greatly, depending on the functionality of the used model. Due to copyright, no model is currently included in this prototype.
    1. Select the data set for training
     ![Data Set Selection](docu/screenshots/MMLP_DS_Training_DatasetSelection.png)
 
@@ -129,7 +129,7 @@ docker-compose up -d
 8. Method Overview (A method represents a model snapshot, that is exported and made available to a medical expert. It can be used without further configuration)
 ![Methid Overview](docu/screenshots/MMLP_DS_MethodOverview.png)
 
-9.  Result View: An overview of the results of the application of a method by the user. This is intendet to allow further debugging by the clinical data scientist.
+9.  Result View: An overview of the results of the application of a method by the user. This is intended to allow further debugging by the clinical data scientist.
 ![Result Overview](docu/screenshots/MMLP_DS_ResultOverview.png)
 
 ### Medical Expert (User without machine learning experience) View
