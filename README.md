@@ -10,7 +10,6 @@ The full thesis and further information are published in the Heidelberg Document
 Further changes and developments after July 2019 were performed independently from the Heidelberg University and the DKFZ.
 
 ## Platform Data Storage Structure
-Please do not change anything by hand here to avoid issues.
 All data objects are stored using UUIDs to avoid conflicts with similar objects.
 
 * */data* is per default created and mounted to stores the data of the platform.
