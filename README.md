@@ -61,7 +61,9 @@ docker-compose up -d
 ```
 
 4. Enjoy
- If deployed locally you can access the platform on port 80 with http://localhost 
+ If deployed locally you can access the platform on port 80 with http://localhost
+ 
+ 
  *Note:* 
  * https is not activated by default, due to the increased complexity with the certificates. To create certificates [Letsencrypt](https://letsencrypt.org/) is recommended.
  * Sometimes, the browser tries to switch to https automatically and fails. If the platform is not showing as expected, check your browser.
