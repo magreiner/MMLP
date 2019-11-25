@@ -157,8 +157,7 @@ Details described in frontend directory
 ## Containers
 Various containers were helpful during development. Maybe they can be useful for you, too: 
 
-* PACS
- PACS stack based on https://www.dcm4che.org/
+* PACS Container Stack (based on https://www.dcm4che.org)
 * Dataset Generators
 * Port Redirect
 * Postprocessing
