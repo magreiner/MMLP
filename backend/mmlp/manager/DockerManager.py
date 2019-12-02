@@ -23,6 +23,12 @@ class DockerManager:
         self._d_low = docker.APIClient()
         self._con = self._d.containers
 
+        # Login to docker registry using the provided credentials from the config
+        self.login = self._d.login(username=self._config.docker_registry_username,
+                                   password=self._config.docker_registry_password,
+                                   reauth=False)
+
+
     @curry
     def build_container_context(self, context: ModelSnapshot) -> ModelSnapshot:
         # container must be re-used
@@ -103,7 +109,7 @@ class DockerManager:
                                                   new_status=f'Push Trained ModelSnapshot to Registry')
 
             i = self._d.images.get(context.new_container_image_name)
-            new_image_tag = f"{self._config.docker_registry}{context.new_container_image_name}"
+            new_image_tag = f"{self._config.docker_registry_address}{context.new_container_image_name}"
 
             # create new tag
             i.tag(new_image_tag)

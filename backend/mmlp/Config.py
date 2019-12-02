@@ -26,7 +26,9 @@ class Config(AbstractEntity):
     version_meta_attributes: List
     versions_file: str
     chunk_size_bytes: int
-    docker_registry: str
+    docker_registry_address: str
+    docker_registry_username: str
+    docker_registry_password: str
     notification_email_to: str
     metadata_file_list: List[str]
     push_trained_images_to_registry: bool
@@ -51,7 +53,9 @@ class Config(AbstractEntity):
                   versions_file='versions.json',
                   chunk_size_bytes=4096,
                   # manual login with docker login required
-                  docker_registry="mattg/",
+                  docker_registry_address="mattg/",
+                  docker_registry_username="mattg",
+                  docker_registry_password="",
                   # Set SMTP credentials in backend/mmlp/utils/utils.py send_email() function
                   notification_email_to="Matthias.Greiner@stud.uni-heidelberg.de",
                   push_trained_images_to_registry=True,
@@ -100,7 +104,9 @@ class Config(AbstractEntity):
             version_meta_attributes=version_meta_attributes,
             versions_file=versions_file,
             chunk_size_bytes=chunk_size_bytes,
-            docker_registry=docker_registry,
+            docker_registry_address=docker_registry_address,
+            docker_registry_username=docker_registry_username,
+            docker_registry_password=docker_registry_password,
             notification_email_to=notification_email_to,
             backend_base_url=backend_base_url,
             push_trained_images_to_registry=push_trained_images_to_registry,

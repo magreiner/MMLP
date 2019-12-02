@@ -78,7 +78,7 @@ class ModelSnapshot(AbstractEntity):
             container_name=data['container_name'],
             container_image_id=data.get('container_image_id', None),
             container_image_name=data.get('container_image_name',
-                                          f"{config.docker_registry}model_{data['model_git_commit']}"),
+                                          f"{config.docker_registry_address}model_{data['model_git_commit']}"),
             container_mount_volumes=data.get('container_mount_volumes', {}),
             container_environment_variables=data.get('container_environment_variables', {}),
             container_ports=data.get('container_ports', {}),
