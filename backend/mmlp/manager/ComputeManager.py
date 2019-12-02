@@ -119,7 +119,7 @@ class ComputeManager:
                 break
 
             # Create preprocesing pipeline
-            pre_processing['pre_processing_container_image_name'] = f"{self._config.docker_registry}{pre_processing_container_name}"
+            pre_processing['pre_processing_container_image_name'] = f"{self._config.docker_registry_address}{pre_processing_container_name}"
             pre_processing['pre_processing_container_name'] = f"pre_processing_snap_{snap.id}"
             pre_processing['pre_processing_application'] = pre_processing_application
             pre_processing['input_data_path'] = Path(tempfile.mkdtemp()) / "dataset"
@@ -164,7 +164,7 @@ class ComputeManager:
         # Start monitoring service
         if snap.parameters.get('monitoring', False):
             ports = {'{}/tcp'.format(snap.parameters['monitoring']['port']): snap.parameters['monitoring']['port']}
-            self._docker.run_container(container_image_name=f"{self._config.docker_registry}{snap.parameters['monitoring']['container']}",
+            self._docker.run_container(container_image_name=f"{self._config.docker_registry_address}{snap.parameters['monitoring']['container']}",
                                        container_autoremove=True,
                                        container_name=f"mon_{snap.parameters['monitoring']['name']}",
                                        ports=ports)
