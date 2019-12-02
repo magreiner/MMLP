@@ -9,11 +9,10 @@ python3 app.py
 # This key is used when a model git repo is accessed to authenticate
 
 # Check the config in repo/backend/mmlp/config.py
-```
+
 
 ## Ensure Python 3.7 is available
 For ubuntu 18.04 this might help:
-
 
 sudo add-apt-repository -y ppa:ubuntu-toolchain-r/ppa
 
