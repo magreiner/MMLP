@@ -1,11 +1,10 @@
 import dataclasses
+import docker
 import json
 import time
 from pathlib import Path
-from typing import Union
-
-import docker
 from toolz import curry, excepts
+from typing import Union
 
 from mmlp import Config
 from mmlp.data import ModelSnapshot, Result
@@ -26,7 +25,6 @@ class DockerManager:
         self.login = self._d.login(username=self._config.docker_registry_username,
                                    password=self._config.docker_registry_password,
                                    reauth=False)
-
 
     @curry
     def build_container_context(self, context: ModelSnapshot) -> ModelSnapshot:
@@ -128,7 +126,8 @@ class DockerManager:
             context = dataclasses.replace(context, container_push_logs=merged_logs)
 
             # Write Push log
-            write_to_file(Path(context.storage_path) / f"Container_Push_Trained_Model_{get_timestamp(date_format='filename')}.log", logs)
+            write_to_file(Path(context.storage_path) /
+                          f"Container_Push_Trained_Model_{get_timestamp(date_format='filename')}.log", logs)
 
         return context
 
@@ -177,7 +176,8 @@ class DockerManager:
             log_container_prepare += f"\nPre-processing Log: {context.container_pre_processing_logs}"
 
         # Write Build log
-        write_to_file(Path(context.storage_path) / f"Container_Pull_{get_timestamp(date_format='filename')}.log", log_container_prepare)
+        write_to_file(Path(context.storage_path) /
+                      f"Container_Pull_{get_timestamp(date_format='filename')}.log", log_container_prepare)
 
         log_container_running += "Result: {}\n".format(True if container_info["exit_code"] == 0 else False)
         if container_info["exit_code"] != 0 and container_info["exit_message"]:
@@ -186,54 +186,55 @@ class DockerManager:
         log_container_running += "Finished: {}\n\nOutput:\n\n".format(container_info["end_time"])
         log_container_running += running_container.logs(timestamps=True).decode("utf-8")
 
-        context = dataclasses.replace(context, container_run_logs=running_container.logs(timestamps=True).decode("utf-8"))
+        context = dataclasses.replace(context,
+                                      container_run_logs=running_container.logs(timestamps=True).decode("utf-8"))
 
         # Write runtime log to disk
         write_to_file(Path(context.storage_path) / f"Container_Output_{get_timestamp(date_format='filename')}.log",
                       remove_ansi_escape_tags(log_container_running))
 
         # Write performance statistics to file
-        write_json_file(filename=Path(context.storage_path) / f"Container_Performance_statistics.json", content=container_statistics)
+        write_json_file(filename=Path(context.storage_path) / f"Container_Performance_statistics.json",
+                        content=container_statistics)
 
         # Always true for eval purpose
         if container_info["exit_code"] == 0:
             # if container_info["exit_code"] == 0 or True:
             context = dataclasses.replace(context, success=True)
             if not context.container_image_name.startswith('mon_'):
-
                 # Send Email to inform user
                 send_email_config(self._config,
-                           subject=f"Successful Method Analysis Pipeline: {context.id}",
-                           body="Congratulations!\n"
-                                "Your method application pipeline succeeded\n"
-                                "Check the attached logs for further details.\n",
-                           attachments=[{
-                               "Filename": f"Container-Pull_{context.container_name}_{get_timestamp(date_format='filename')}.log",
-                               "Content": log_container_prepare
-                           }, {
-                               "Filename": f"Container-Output_{context.container_name}_{get_timestamp(date_format='filename')}.log",
-                               "Content": remove_ansi_escape_tags(log_container_running)
-                           }, {
-                               "Filename": f"Container-PerformanceStatistics_{context.container_name}_{get_timestamp(date_format='filename')}.json",
-                               "Content": json.dumps(container_statistics)
-                           }
+                                  subject=f"Successful Method Analysis Pipeline: {context.id}",
+                                  body="Congratulations!\n"
+                                       "Your method application pipeline succeeded\n"
+                                       "Check the attached logs for further details.\n",
+                                  attachments=[{
+                                      "Filename": f"Container-Pull_{context.container_name}_{get_timestamp(date_format='filename')}.log",
+                                      "Content": log_container_prepare
+                                  }, {
+                                      "Filename": f"Container-Output_{context.container_name}_{get_timestamp(date_format='filename')}.log",
+                                      "Content": remove_ansi_escape_tags(log_container_running)
+                                  }, {
+                                      "Filename": f"Container-PerformanceStatistics_{context.container_name}_{get_timestamp(date_format='filename')}.json",
+                                      "Content": json.dumps(container_statistics)
+                                  }
 
-                           ])
+                                  ])
         else:
             context = dataclasses.replace(context, success=False)
             send_email_config(self._config,
-                       subject=f"Failed Method Analysis Pipeline: {context.container_name}",
-                       body="Unfortunately, your method analysis pipeline failed.\n"
-                            "Check the attached logs to solve the issues.\n"
-                            "If you have questions, please ask your administrator.",
-                       attachments=[{
-                           "Filename": f"Container-Pull_{context.container_name}_{get_timestamp(date_format='filename')}.log",
-                           "Content": log_container_prepare
-                       }, {
-                           "Filename": f"Container-Output_{context.container_name}_{get_timestamp(date_format='filename')}.log",
-                           "Content": remove_ansi_escape_tags(log_container_running)
-                       }
-                       ])
+                              subject=f"Failed Method Analysis Pipeline: {context.container_name}",
+                              body="Unfortunately, your method analysis pipeline failed.\n"
+                                   "Check the attached logs to solve the issues.\n"
+                                   "If you have questions, please ask your administrator.",
+                              attachments=[{
+                                  "Filename": f"Container-Pull_{context.container_name}_{get_timestamp(date_format='filename')}.log",
+                                  "Content": log_container_prepare
+                              }, {
+                                  "Filename": f"Container-Output_{context.container_name}_{get_timestamp(date_format='filename')}.log",
+                                  "Content": remove_ansi_escape_tags(log_container_running)
+                              }
+                              ])
         return context
 
     @curry
@@ -285,7 +286,8 @@ class DockerManager:
             log_container_prepare += f"\nPre-processing Log: {context.container_pre_processing_logs}"
 
         # Write Build log
-        write_to_file(Path(context.storage_path) / f"Container_Build_{get_timestamp(date_format='filename')}.log", log_container_prepare)
+        write_to_file(Path(context.storage_path) / f"Container_Build_{get_timestamp(date_format='filename')}.log",
+                      log_container_prepare)
 
         log_container_running += "Result: {}\n".format(True if container_info["exit_code"] == 0 else False)
         if container_info["exit_code"] != 0 and container_info["exit_message"]:
@@ -294,54 +296,55 @@ class DockerManager:
         log_container_running += "Finished: {}\n\nOutput:\n\n".format(container_info["end_time"])
         log_container_running += running_container.logs(timestamps=True).decode("utf-8")
 
-        context = dataclasses.replace(context, container_run_logs=running_container.logs(timestamps=True).decode("utf-8"))
+        context = dataclasses.replace(context,
+                                      container_run_logs=running_container.logs(timestamps=True).decode("utf-8"))
 
         # Write runtime log to disk
         write_to_file(Path(context.storage_path) / f"Container_Output_{get_timestamp(date_format='filename')}.log",
                       remove_ansi_escape_tags(log_container_running))
 
         # Write performance statistics to file
-        write_json_file(filename=Path(context.storage_path) / f"Container_Performance_statistics.json", content=container_statistics)
+        write_json_file(filename=Path(context.storage_path) / f"Container_Performance_statistics.json",
+                        content=container_statistics)
 
         # Always true for eval purpose
         if container_info["exit_code"] == 0:
-        # if container_info["exit_code"] == 0 or True:
+            # if container_info["exit_code"] == 0 or True:
             context = dataclasses.replace(context, success=True)
             if not context.container_image_name.startswith('mon_'):
-
                 # Send Email to inform user
                 send_email_config(self._config,
-                           subject=f"Successful Model Training Pipeline: {context.id}",
-                           body="Congratulations!\n"
-                                "Your model training pipeline succeeded\n"
-                                "Check the attached logs for further details.\n",
-                           attachments=[{
-                               "Filename": f"Container-Build_{context.container_name}_{get_timestamp(date_format='filename')}.log",
-                               "Content": log_container_prepare
-                           }, {
-                               "Filename": f"Container-Output_{context.container_name}_{get_timestamp(date_format='filename')}.log",
-                               "Content": remove_ansi_escape_tags(log_container_running)
-                           }, {
-                               "Filename": f"Container-PerformanceStatistics_{context.container_name}_{get_timestamp(date_format='filename')}.json",
-                               "Content": json.dumps(container_statistics)
-                           }
+                                  subject=f"Successful Model Training Pipeline: {context.id}",
+                                  body="Congratulations!\n"
+                                       "Your model training pipeline succeeded\n"
+                                       "Check the attached logs for further details.\n",
+                                  attachments=[{
+                                      "Filename": f"Container-Build_{context.container_name}_{get_timestamp(date_format='filename')}.log",
+                                      "Content": log_container_prepare
+                                  }, {
+                                      "Filename": f"Container-Output_{context.container_name}_{get_timestamp(date_format='filename')}.log",
+                                      "Content": remove_ansi_escape_tags(log_container_running)
+                                  }, {
+                                      "Filename": f"Container-PerformanceStatistics_{context.container_name}_{get_timestamp(date_format='filename')}.json",
+                                      "Content": json.dumps(container_statistics)
+                                  }
 
-                           ])
+                                  ])
         else:
             context = dataclasses.replace(context, success=False)
             send_email_config(self._config,
-                       subject=f"Failed Model Training Pipeline: {context.container_name}",
-                       body="Unfortunately, your training pipeline failed.\n"
-                            "Check the attached logs to solve the issues.\n"
-                            "If you have questions, please ask your administrator.",
-                       attachments=[{
-                           "Filename": f"Container-Build_{context.container_name}_{get_timestamp(date_format='filename')}.log",
-                           "Content": log_container_prepare
-                       }, {
-                           "Filename": f"Container-Output_{context.container_name}_{get_timestamp(date_format='filename')}.log",
-                           "Content": remove_ansi_escape_tags(log_container_running)
-                       }
-                       ])
+                              subject=f"Failed Model Training Pipeline: {context.container_name}",
+                              body="Unfortunately, your training pipeline failed.\n"
+                                   "Check the attached logs to solve the issues.\n"
+                                   "If you have questions, please ask your administrator.",
+                              attachments=[{
+                                  "Filename": f"Container-Build_{context.container_name}_{get_timestamp(date_format='filename')}.log",
+                                  "Content": log_container_prepare
+                              }, {
+                                  "Filename": f"Container-Output_{context.container_name}_{get_timestamp(date_format='filename')}.log",
+                                  "Content": remove_ansi_escape_tags(log_container_running)
+                              }
+                              ])
         return context
 
     @curry
@@ -415,13 +418,16 @@ class DockerManager:
         return logs
 
     @curry
-    def perform_pre_processing_context(self, context: Union[ModelSnapshot, Result]) -> Union[Exception, ModelSnapshot, Result]:
+    def perform_pre_processing_context(self, context: Union[ModelSnapshot, Result]) -> Union[Exception,
+                                                                                             ModelSnapshot,
+                                                                                             Result]:
         if context.pre_processing.get('pre_processing_application', False):
             context = update_instance_status_rest(instance=context, new_status=f'Pre-Processing Input Data')
 
             # Pull pre processing container
             container_pre_processing_logs = "Preprocessing Container Pull Log: \n"
-            container_pre_processing_logs += self.pull_container(container_image_registry="", container_image_name=context.pre_processing['pre_processing_container_image_name'])
+            container_pre_processing_logs += self.pull_container(container_image_registry="",
+                                                                 container_image_name=context.pre_processing['pre_processing_container_image_name'])
 
             # Run pre processing container
             pre_container = self.run_container(
@@ -433,7 +439,6 @@ class DockerManager:
 
             # Wait for termination
             while pre_container.status in CONTAINER_RUNNING_STATUSES:
-
                 time.sleep(10)
 
                 # Reload container data
@@ -456,8 +461,9 @@ class DockerManager:
             container_pre_processing_logs += pre_container.logs(timestamps=True).decode("utf-8")
 
             # Write runtime log to disk
-            write_to_file(Path(context.storage_path) / f"Pre_processing_Output_{get_timestamp(date_format='filename')}.log",
-                          remove_ansi_escape_tags(container_pre_processing_logs))
+            write_to_file(
+                Path(context.storage_path) / f"Pre_processing_Output_{get_timestamp(date_format='filename')}.log",
+                remove_ansi_escape_tags(container_pre_processing_logs))
 
             context = dataclasses.replace(context, container_pre_processing_logs=container_pre_processing_logs)
 

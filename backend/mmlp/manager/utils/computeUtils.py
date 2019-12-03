@@ -67,7 +67,8 @@ def finalize_pipeline(instance: Union[ModelSnapshot, Result]) -> Union[Exception
 
 
 @curry
-def update_instance_status_rest(instance: Union[ModelSnapshot, Result], new_status: str) -> Union[ModelSnapshot, Result]:
+def update_instance_status_rest(instance: Union[ModelSnapshot, Result], new_status: str) -> Union[ModelSnapshot,
+                                                                                                  Result]:
     instance = dataclasses.replace(instance, status=new_status)
 
     return update_instance_rest(instance=instance)
@@ -88,7 +89,9 @@ def update_instance_rest(instance: Union[ModelSnapshot, Result]) -> Union[ModelS
 
 
 @curry
-def update_status(manager: Union[SnapshotManager, ResultManager], instance: Union[ModelSnapshot, Result], new_status: str) -> Union[ModelSnapshot, Result]:
+def update_status(manager: Union[SnapshotManager, ResultManager],
+                  instance: Union[ModelSnapshot, Result],
+                  new_status: str) -> Union[ModelSnapshot, Result]:
     instance = dataclasses.replace(instance, status=new_status)
     instance = manager.replace(instance)
 

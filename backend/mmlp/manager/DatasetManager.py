@@ -1,17 +1,13 @@
 # To use the instance return type from static methods
 from __future__ import annotations
-import os
-import io
-import time
-import math
+
 import dataclasses
 import shutil
-from pathlib import Path
-from typing import Iterator, Mapping, Union
-
-from uuid import UUID
 from falcon import Request
+from pathlib import Path
 from toolz import get, partition_all, curry, assoc, map, valfilter, dissoc, do
+from typing import Iterator, Mapping, Union
+from uuid import UUID
 
 from mmlp.Config import Config
 from mmlp.data import Dataset
@@ -19,8 +15,8 @@ from mmlp.data import DatasetVersion
 from mmlp.manager.utils.datasetUtils import move_to_storage, \
     create_initial_version, partition_versions
 from mmlp.manager.utils.utils import load_objects_from_storage, create_object_from_archive
-from mmlp.utils import upload_to_temp_dir, excepting_pipe, extract_tarball_to_temp_dir, ensure_no_metadata_files_present, \
-    ensure_uuid, move_to_temp_dir, process_multi_part_upload
+from mmlp.utils import excepting_pipe, extract_tarball_to_temp_dir, \
+    ensure_no_metadata_files_present, ensure_uuid, process_multi_part_upload
 
 
 class DatasetManager:

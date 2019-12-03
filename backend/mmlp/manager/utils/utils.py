@@ -1,10 +1,9 @@
 import json
 from datetime import datetime
 from pathlib import Path
+from toolz import curry, merge
 from typing import List, TypeVar
 from uuid import UUID, uuid4
-
-from toolz import curry, merge
 
 from mmlp.utils import excepting_pipe, list_files, load_json
 
@@ -23,7 +22,12 @@ def load_objects_from_storage(metadata_filename: str, class_factory: GenericObje
 
 
 @curry
-def create_object_from_archive(parent_id: UUID, metadata_filename: str, class_factory: GenericObject, root_directory: Path, keys: List[str], context: dict) -> dict:
+def create_object_from_archive(parent_id: UUID,
+                               metadata_filename: str,
+                               class_factory: GenericObject,
+                               root_directory: Path,
+                               keys: List[str],
+                               context: dict) -> dict:
     # Generate new ID for the object
     object_id = uuid4()
 
