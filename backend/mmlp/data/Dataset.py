@@ -2,6 +2,7 @@ from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
 from uuid import UUID
+
 from mmlp.data.utils import AbstractEntity
 from mmlp.utils import ensure_uuid
 

@@ -1,4 +1,4 @@
 from .ResultCollection import ResultCollection
-from .ResultDownload import ResultDownload
 from .ResultCount import ResultCount
+from .ResultDownload import ResultDownload
 from .ResultReplace import ResultReplace

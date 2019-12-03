@@ -1,4 +1,2 @@
-
-
 class SnapshotModelVersionCollection:
     pass

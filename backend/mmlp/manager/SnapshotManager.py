@@ -1,14 +1,12 @@
 # To use the instance return type from static methods
 from __future__ import annotations
 
+import docker
 from pathlib import Path
+from shutil import rmtree
+from toolz import curry, partition_all, get, excepts
 from typing import Mapping, Union, Iterator
 from uuid import UUID
-
-from shutil import rmtree
-
-import docker
-from toolz import curry, partition_all, get, excepts
 
 from mmlp.Config import Config
 from mmlp.data import ModelSnapshot
@@ -45,7 +43,8 @@ class SnapshotManager:
         # Create snapshot on filesystem
         Path(snap.storage_path).mkdir(parents=True)
 
-        write_json_file(str(Path(snap.storage_path) / self._config.model_snapshot_filename), transform_dataclass_to_dict(snap))
+        write_json_file(str(Path(snap.storage_path) / self._config.model_snapshot_filename),
+                        transform_dataclass_to_dict(snap))
 
         # add snap object
         self._snapshots[snap.id] = snap
@@ -57,7 +56,8 @@ class SnapshotManager:
             raise Exception("replace_snapshot", f"Snapshot with ID {snap.id} is not known")
 
         # Update snapshot file
-        write_json_file(str(Path(snap.storage_path) / self._config.model_snapshot_filename), transform_dataclass_to_dict(snap))
+        write_json_file(str(Path(snap.storage_path) / self._config.model_snapshot_filename),
+                        transform_dataclass_to_dict(snap))
 
         # Replace snapshot object
         self._snapshots.pop(snap.id)

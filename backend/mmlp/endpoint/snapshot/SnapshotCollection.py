@@ -1,10 +1,8 @@
-from uuid import UUID
-
 from falcon import Request, Response, falcon
 from pandas.io import json
+from uuid import UUID
 
 from mmlp.data import ModelSnapshot
-from mmlp.endpoint.compute.utils import transform_dataclass_to_dict
 from mmlp.manager import SnapshotManager
 from mmlp.utils import get_params_to_query
 

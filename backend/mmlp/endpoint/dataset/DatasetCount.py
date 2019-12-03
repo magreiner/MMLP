@@ -1,5 +1,4 @@
 import json
-
 from falcon import Request, Response
 
 from mmlp.manager.DatasetManager import DatasetManager

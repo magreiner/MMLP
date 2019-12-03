@@ -1,6 +1,5 @@
-import json
-
 import falcon
+import json
 from falcon import Request, Response
 
 from mmlp.Config import Config
@@ -33,5 +32,3 @@ class UploadPatientCohort:
             else:
                 resp.body = json.dumps(result)
                 resp.status = falcon.HTTP_200
-
-

@@ -1,6 +1,5 @@
-import json
-
 import falcon
+import json
 from falcon import Request, Response
 
 from mmlp.manager.ModelManager import ModelManager

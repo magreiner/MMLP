@@ -1,5 +1,4 @@
 import json
-
 from falcon import Request, Response, falcon
 
 from mmlp.manager import SnapshotManager

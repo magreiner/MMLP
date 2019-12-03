@@ -2,13 +2,11 @@ from __future__ import annotations
 
 import dataclasses
 import os
-from multiprocessing import Process
-from typing import Union
-
 import tempfile
-
+from multiprocessing import Process
 from pathlib import Path
 from shutil import copytree
+from typing import Union
 
 from mmlp.Config import Config
 from mmlp.data import ModelSnapshot
@@ -119,7 +117,8 @@ class ComputeManager:
                 break
 
             # Create preprocesing pipeline
-            pre_processing['pre_processing_container_image_name'] = f"{self._config.docker_registry_address}{pre_processing_container_name}"
+            pre_processing['pre_processing_container_image_name'] = \
+                f"{self._config.docker_registry_address}{pre_processing_container_name}"
             pre_processing['pre_processing_container_name'] = f"pre_processing_snap_{snap.id}"
             pre_processing['pre_processing_application'] = pre_processing_application
             pre_processing['input_data_path'] = Path(tempfile.mkdtemp()) / "dataset"

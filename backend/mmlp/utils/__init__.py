@@ -1,18 +1,17 @@
 import io
 import json
+import math
 import os
 import shutil
 import tarfile
 import tempfile
 import time
-from pathlib import Path
-from typing import Iterator, List, Union
-from uuid import UUID
-
-import math
 from falcon import Request
+from pathlib import Path
 from toolz import curry, do
 from toolz import excepts
+from typing import Iterator, List, Union
+from uuid import UUID
 
 # Converts a string to an int safely, default is 0
 safe_int = excepts(ValueError, lambda s: int(s), lambda _: 0)
@@ -43,17 +42,17 @@ def excepting_pipe(data, *funcs):
             if hasattr(func, '__code__'):
                 if hasattr(func, 'args'):
                     print(f'Exception occurred in excepting pipe function {repr(func.__code__), func.args}: {data}')
-                    data.args = (f'{repr(func.__code__), func.args}: {data.args[0]}', )
+                    data.args = (f'{repr(func.__code__), func.args}: {data.args[0]}',)
                 else:
                     print(f'Exception occurred in excepting pipe function {repr(func.__code__)}: {data}')
-                    data.args = (f'{repr(func.__code__)}: {data.args[0]}', )
+                    data.args = (f'{repr(func.__code__)}: {data.args[0]}',)
             else:
                 if hasattr(func, 'args'):
                     print(f'Exception occurred in excepting pipe function {repr(func.__name__), func.args}: {data}')
-                    data.args = (f'{repr(func.__name__), func.args}: {data.args[0]}', )
+                    data.args = (f'{repr(func.__name__), func.args}: {data.args[0]}',)
                 else:
                     print(f'Exception occurred in excepting pipe function {repr(func.__name__)}: {data}')
-                    data.args = (f'{repr(func.__name__)}: {data.args[0]}', )
+                    data.args = (f'{repr(func.__name__)}: {data.args[0]}',)
             return data
     return data
 

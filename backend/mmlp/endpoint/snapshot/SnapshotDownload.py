@@ -1,11 +1,9 @@
-import json
-import io
-import os
-from uuid import UUID
-import tempfile
-from pathlib import Path
-
 import falcon
+import io
+import json
+import os
+from pathlib import Path
+from uuid import UUID
 
 from mmlp.manager import SnapshotManager
 
@@ -33,5 +31,3 @@ class SnapshotDownload:
                 resp.set_stream(io.open(str(file_path), 'rb'), os.path.getsize(str(file_path)))
                 resp.downloadable_as = Path(file_path).name
                 resp.status = falcon.HTTP_201
-
-

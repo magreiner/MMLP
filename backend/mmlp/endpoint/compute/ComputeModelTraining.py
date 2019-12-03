@@ -2,11 +2,9 @@ import dataclasses
 import json
 from dataclasses import asdict
 from datetime import datetime
-
 from falcon import Request, Response, falcon
-from uuid import uuid4
-
 from pathlib import Path
+from uuid import uuid4
 
 from mmlp import Config
 from mmlp.data import ModelSnapshot, Model, DatasetVersion
@@ -18,7 +16,8 @@ from mmlp.manager import ModelManager
 
 
 class ComputeModelTraining:
-    def __init__(self, config: Config, dataset_manager: DatasetManager, model_manager: ModelManager, compute_manager: ComputeManager, snapshot_manager: SnapshotManager):
+    def __init__(self, config: Config, dataset_manager: DatasetManager, model_manager: ModelManager,
+                 compute_manager: ComputeManager, snapshot_manager: SnapshotManager):
         self._config: Config = config
         self._dataset_manager: DatasetManager = dataset_manager
         self._model_manager: ModelManager = model_manager
@@ -72,7 +71,8 @@ class ComputeModelTraining:
 
                 return resp
 
-            new_model_snapshot = dataclasses.replace(new_model_snapshot,  container_image_name=parent_snap.new_container_image_name)
+            new_model_snapshot = dataclasses.replace(new_model_snapshot,
+                                                     container_image_name=parent_snap.new_container_image_name)
 
         self._snapshot_manager.create_snapshot(new_model_snapshot)
         new_model_snapshot = self._compute_manager.train_model(new_model_snapshot)

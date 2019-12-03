@@ -3,11 +3,10 @@ from __future__ import annotations
 
 from datetime import datetime
 from pathlib import Path
+from toolz import curry, partition_all, get
 from typing import Mapping, Union, Iterator
 from uuid import UUID
 from uuid import uuid4
-
-from toolz import curry, partition_all, get
 
 from mmlp.Config import Config
 from mmlp.data import Method

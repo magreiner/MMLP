@@ -1,9 +1,8 @@
 import shutil
 from pathlib import Path
+from toolz import curry, assoc, partition_all
 from typing import List
 from uuid import uuid4
-
-from toolz import curry, assoc, partition_all
 
 from mmlp.data import DatasetVersion
 

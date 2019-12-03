@@ -2,10 +2,9 @@ import json
 import shutil
 from dataclasses import asdict
 from datetime import datetime
+from falcon import Request, Response, falcon
 from pathlib import Path
 from uuid import uuid4
-
-from falcon import Request, Response, falcon
 
 from mmlp.Config import Config
 from mmlp.data import Method, Result
@@ -14,7 +13,8 @@ from mmlp.manager import ComputeManager, ResultManager, MethodManager
 
 
 class ComputeMethodApplication:
-    def __init__(self, config: Config, method_manager: MethodManager, compute_manager: ComputeManager, result_manager: ResultManager):
+    def __init__(self, config: Config, method_manager: MethodManager, compute_manager: ComputeManager,
+                 result_manager: ResultManager):
         self._config: Config = config
         self._method_manager: MethodManager = method_manager
         self._compute_manager: ComputeManager = compute_manager

@@ -1,7 +1,6 @@
+import falcon
 import json
 from dataclasses import asdict
-
-import falcon
 from falcon import Request, Response
 from toolz import map
 
@@ -44,6 +43,3 @@ class DatasetCollection:
         else:
             resp.body = result.json()
             resp.status = falcon.HTTP_201
-
-
-

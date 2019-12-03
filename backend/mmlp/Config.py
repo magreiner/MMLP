@@ -5,8 +5,6 @@ from typing import List
 from mmlp.data.utils.AbstractEntity import AbstractEntity
 
 
-# DATASET_BASE_DIR=os.path.join(os.sep, "data", "datasets"),
-
 @dataclass
 class Config(AbstractEntity):
     platform_base_dir: Path
@@ -29,37 +27,49 @@ class Config(AbstractEntity):
     docker_registry_address: str
     docker_registry_username: str
     docker_registry_password: str
-    notification_email_to: str
+    email_notification_smtp_address: str
+    email_notification_to: str
+    email_notification_from: str
+    email_notification_username: str
+    email_notification_password: str
     metadata_file_list: List[str]
     push_trained_images_to_registry: bool
     backend_base_url: str
 
     @staticmethod
-    def from_dict(platform_base_dir=Path('/data/MMLP'),
-                  dataset_base_dir_name='datasets',
-                  dataset_filename='dataset.json',
-                  dataset_meta_attributes=None,
-                  model_base_dir_name='models',
-                  model_filename='model.json',
-                  model_snapshot_filename='snapshot.json',
-                  model_snapshot_dirname='snapshots',
-                  repository_dirname='repository',
-                  parameters_filename='parameters.json',
-                  method_filename='method.json',
-                  result_filename='result.json',
-                  result_base_dir='results',
-                  version_filename='version.json',
-                  version_meta_attributes=None,
-                  versions_file='versions.json',
-                  chunk_size_bytes=4096,
-                  # manual login with docker login required
-                  docker_registry_address="mattg/",
-                  docker_registry_username="mattg",
-                  docker_registry_password="",
-                  # Set SMTP credentials in backend/mmlp/utils/utils.py send_email() function
-                  notification_email_to="Matthias.Greiner@stud.uni-heidelberg.de",
-                  push_trained_images_to_registry=True,
-                  backend_base_url="http://HOSTNAME:8000"):
+    def from_dict(  # Set docker registry credentials:
+            docker_registry_address="SET_REGISTRY_ADDRESS",
+            docker_registry_username="SET_USERNAME",
+            docker_registry_password="SET_PASSWORD",
+            # Set Email SMTP credentials:
+            email_notification_smtp_address="SET_SMTP_HOST",
+            email_notification_to="SET_RECEPIENT",
+            email_notification_from="SomeMail@provider.com",
+            email_notification_username="SET_USERNAME",
+            email_notification_password="SET_PASSWORD",
+            # Set IP-Address or domain name of the docker-host:
+            # For https setup certificates first
+            backend_base_url="http://SET_HOST:8000",
+
+            # Advanced Settings:
+            push_trained_images_to_registry=True,
+            platform_base_dir=Path('/data/MMLP'),
+            dataset_base_dir_name='datasets',
+            dataset_filename='dataset.json',
+            dataset_meta_attributes=None,
+            model_base_dir_name='models',
+            model_filename='model.json',
+            model_snapshot_filename='snapshot.json',
+            model_snapshot_dirname='snapshots',
+            repository_dirname='repository',
+            parameters_filename='parameters.json',
+            method_filename='method.json',
+            result_filename='result.json',
+            result_base_dir='results',
+            version_filename='version.json',
+            version_meta_attributes=None,
+            versions_file='versions.json',
+            chunk_size_bytes=4096):
 
         # initialize mutable default arguments
         if dataset_meta_attributes is None:
@@ -95,7 +105,7 @@ class Config(AbstractEntity):
             model_filename=model_filename,
             model_snapshot_filename=model_snapshot_filename,
             model_snapshot_dirname=model_snapshot_dirname,
-            repository_dirname=repository_dirname, # source_code
+            repository_dirname=repository_dirname,  # source_code
             parameters_filename=parameters_filename,
             result_filename=result_filename,
             result_base_dir=platform_base_dir / result_base_dir,
@@ -107,7 +117,11 @@ class Config(AbstractEntity):
             docker_registry_address=docker_registry_address,
             docker_registry_username=docker_registry_username,
             docker_registry_password=docker_registry_password,
-            notification_email_to=notification_email_to,
+            email_notification_smtp_address=email_notification_smtp_address,
+            email_notification_to=email_notification_to,
+            email_notification_from=email_notification_from,
+            email_notification_username=email_notification_username,
+            email_notification_password=email_notification_password,
             backend_base_url=backend_base_url,
             push_trained_images_to_registry=push_trained_images_to_registry,
             # parameters.json is required and should not be renamed

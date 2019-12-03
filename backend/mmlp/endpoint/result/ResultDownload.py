@@ -1,11 +1,9 @@
-import json
-import io
-import os
-from uuid import UUID
-import tempfile
-from pathlib import Path
-
 import falcon
+import io
+import json
+import os
+from pathlib import Path
+from uuid import UUID
 
 from mmlp.manager import ResultManager
 

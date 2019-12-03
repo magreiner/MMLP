@@ -3,17 +3,16 @@ from __future__ import annotations
 import dataclasses
 import json
 import tempfile
-from pathlib import Path
-from typing import Union
-
 from git import Repo
+from pathlib import Path
 from shutil import rmtree
 from toolz import curry
+from typing import Union
 
 from mmlp.data import ModelSnapshot, Result
 from mmlp.manager import SnapshotManager, ResultManager
 from mmlp.utils.RequestClient import RequestClient
-from mmlp.utils.utils import create_directory_zip, create_directory_tar
+from mmlp.utils.utils import create_directory_zip
 
 
 @curry
@@ -68,7 +67,8 @@ def finalize_pipeline(instance: Union[ModelSnapshot, Result]) -> Union[Exception
 
 
 @curry
-def update_instance_status_rest(instance: Union[ModelSnapshot, Result], new_status: str) -> Union[ModelSnapshot, Result]:
+def update_instance_status_rest(instance: Union[ModelSnapshot, Result], new_status: str) -> Union[ModelSnapshot,
+                                                                                                  Result]:
     instance = dataclasses.replace(instance, status=new_status)
 
     return update_instance_rest(instance=instance)
@@ -89,7 +89,9 @@ def update_instance_rest(instance: Union[ModelSnapshot, Result]) -> Union[ModelS
 
 
 @curry
-def update_status(manager: Union[SnapshotManager, ResultManager], instance: Union[ModelSnapshot, Result], new_status: str) -> Union[ModelSnapshot, Result]:
+def update_status(manager: Union[SnapshotManager, ResultManager],
+                  instance: Union[ModelSnapshot, Result],
+                  new_status: str) -> Union[ModelSnapshot, Result]:
     instance = dataclasses.replace(instance, status=new_status)
     instance = manager.replace(instance)
 

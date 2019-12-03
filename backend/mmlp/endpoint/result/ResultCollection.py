@@ -1,11 +1,9 @@
-from dataclasses import asdict
-
-from falcon import Request, Response, falcon
 import json
+from dataclasses import asdict
+from falcon import Request, Response, falcon
 
 from mmlp.data import Result
 from mmlp.data.utils import DataclassJSONEncoder
-from mmlp.endpoint.compute.utils import transform_dataclass_to_dict
 from mmlp.manager import ResultManager
 from mmlp.utils import get_params_to_query
 

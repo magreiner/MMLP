@@ -36,5 +36,3 @@ class ModelVersion(AbstractEntity):
     @staticmethod
     def from_json(data: dict):
         return ModelVersion.from_dict(data)
-
-

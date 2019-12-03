@@ -1,12 +1,11 @@
+import GPUtil
+import psutil
 from collections import Mapping
 from uuid import UUID, uuid4
 
-import GPUtil
-import psutil
-
 from mmlp.data import ModelSnapshot
 from mmlp.manager import DockerManager
-from mmlp.utils.utils import throw_exception, update_json_file, read_json_file
+from mmlp.utils.utils import throw_exception
 
 
 class ResourceManager:
@@ -113,5 +112,3 @@ class ResourceManager:
     #
     # def get_running_experiments(self):
     #     return self.experiment_state
-
-
