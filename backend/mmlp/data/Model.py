@@ -38,5 +38,3 @@ class Model(AbstractEntity):
             code_path=Path(data['code_path']),
             created=datetime.fromisoformat(data['created'])
         )
-
-

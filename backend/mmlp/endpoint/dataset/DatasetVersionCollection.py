@@ -1,8 +1,7 @@
-import json
-from uuid import UUID
-
 import falcon
+import json
 from falcon import Request, Response
+from uuid import UUID
 
 from mmlp.manager.DatasetManager import DatasetManager
 from mmlp.utils import get_params_to_query

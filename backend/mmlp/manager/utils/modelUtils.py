@@ -1,11 +1,10 @@
 import json
-from uuid import UUID, uuid4
 from datetime import datetime
-from pathlib import Path
-from typing import Iterator, List
-
 from git import Commit, Repo
+from pathlib import Path
 from toolz import curry, partition_all, merge
+from typing import Iterator, List
+from uuid import UUID, uuid4
 
 from mmlp.data import ModelVersion, Model
 from mmlp.utils import ensure_no_metadata_files_present
@@ -69,7 +68,8 @@ def update_repository(metadata_file_list: List, repository_dirname: str, model: 
 
     # TODO: update model metadata if model.json is present
     #  (only present if it was changed and re-created by git pull)
-    ensure_no_metadata_files_present(metadata_file_list, context=dict(current_dir=model.storage_path / repository_dirname))
+    ensure_no_metadata_files_present(metadata_file_list,
+                                     context=dict(current_dir=model.storage_path / repository_dirname))
 
     return dict(id=model.id, name=model.name, version=last_commit.hexsha)
 

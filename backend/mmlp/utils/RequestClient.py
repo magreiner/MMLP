@@ -1,9 +1,7 @@
-
 import logging
 import multiprocessing
-from multiprocessing import Process
-
 import requests
+from multiprocessing import Process
 from pandas.io import json
 
 from mmlp.Config import Config

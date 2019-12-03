@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
@@ -87,7 +88,8 @@ class ModelSnapshot(AbstractEntity):
             container_pull_logs=data.get('container_pull_logs', {}),
             container_push_logs=data.get('container_push_logs', {}),
             container_run_logs=data.get('container_run_logs', ''),
-            container_archive_path=Path(data.get('container_archive_path', Path(data['storage_path']) / 'container_archive.tar.gz')),
+            container_archive_path=Path(
+                data.get('container_archive_path', Path(data['storage_path']) / 'container_archive.tar.gz')),
             container_performance_statistics=data.get('statistics', ''),
             container_info=data.get('container_info', dict()),
             new_container_image_name=data.get('new_container_image_name', ''),

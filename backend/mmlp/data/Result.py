@@ -1,9 +1,8 @@
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
-from uuid import UUID
-
 from typing import List
+from uuid import UUID
 
 from mmlp.data.Method import Method
 from mmlp.data.utils import AbstractEntity
@@ -64,7 +63,8 @@ class Result(AbstractEntity):
             status=data.get('status', 'not started yet'),
             container_mount_volumes=data.get('container_mount_volumes', {}),
             container_environment_variables=data.get('container_environment_variables', {}),
-            container_archive_path=Path(data.get('container_archive_path', Path(data['storage_path']) / 'container_archive.gz')),
+            container_archive_path=Path(
+                data.get('container_archive_path', Path(data['storage_path']) / 'container_archive.gz')),
             success=data['success'],
             running=data['running'],
             issuer=data['issuer'],

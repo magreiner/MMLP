@@ -1,6 +1,5 @@
 import json
 from dataclasses import asdict
-
 from falcon import Request, Response, falcon
 
 from mmlp.data import Result

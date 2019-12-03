@@ -1,2 +1,2 @@
-from .DataclassJSONEncoder import DataclassJSONEncoder
 from .AbstractEntity import AbstractEntity
+from .DataclassJSONEncoder import DataclassJSONEncoder

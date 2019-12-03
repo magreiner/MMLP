@@ -1,6 +1,5 @@
-import logging
-
 import falcon
+import logging
 
 from mmlp.utils.utils import throw_exception, max_body
 

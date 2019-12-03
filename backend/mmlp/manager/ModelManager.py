@@ -3,12 +3,11 @@ from __future__ import annotations
 
 import json
 import shutil
-from typing import Iterator, Mapping, Union
-from uuid import UUID
-
 from falcon import Request
 from git import Repo
 from toolz import get, partition_all, curry, assoc, dissoc, do
+from typing import Iterator, Mapping, Union
+from uuid import UUID
 
 from mmlp.Config import Config
 from mmlp.data import Model, ModelVersion

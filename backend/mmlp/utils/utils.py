@@ -1,6 +1,8 @@
 import datetime
+import falcon
 import json
 import logging
+import math
 import os
 import re
 import smtplib
@@ -10,9 +12,6 @@ import zipfile
 from email import encoders
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-
-import falcon
-import math
 
 from mmlp.Config import Config
 

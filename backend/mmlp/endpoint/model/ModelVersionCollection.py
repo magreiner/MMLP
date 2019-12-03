@@ -1,6 +1,5 @@
-from uuid import UUID
-
 from falcon import Request, Response
+from uuid import UUID
 
 from mmlp.manager.ModelManager import ModelManager
 from mmlp.utils import get_params_to_query

@@ -1,14 +1,9 @@
+import falcon
 import json
-from dataclasses import asdict
+from falcon import Request, Response
 from uuid import UUID
 
-import falcon
-from falcon import Request, Response
-from toolz import map
-
-from mmlp import Config
 from mmlp.manager import ResourceManager
-from mmlp.utils import get_params_to_query
 
 # TODO: Limit maximum items to 500
 MAX_ITEMS = 500

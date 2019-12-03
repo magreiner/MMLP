@@ -1,22 +1,17 @@
 from __future__ import annotations
+
 import dataclasses
+import shutil
+from pathlib import Path
+from toolz import get, partition_all, curry
+from typing import Mapping, Union, Iterator
 from uuid import UUID
 
-import shutil
-from falcon import Request
-from git import Repo
-from pathlib import Path
-from toolz import get, partition_all, curry, assoc, dissoc, do
-from typing import Mapping, Union, Iterator
-
 from mmlp.Config import Config
-from mmlp.data import Model, ModelVersion, Method, Result
 from mmlp.data import Result
 from mmlp.endpoint.compute.utils import transform_dataclass_to_dict
-from mmlp.manager.utils.modelUtils import repository_versions, partition_versions, \
-    update_repository, clone_and_create_model
 from mmlp.manager.utils.utils import load_objects_from_storage
-from mmlp.utils import excepting_pipe, ensure_no_metadata_files_present, ensure_uuid
+from mmlp.utils import excepting_pipe, ensure_uuid
 from mmlp.utils.utils import write_json_file
 
 
