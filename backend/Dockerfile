@@ -28,4 +28,4 @@ RUN ssh-keyscan github.com >> /root/.ssh/known_hosts 2>/dev/null
 # TODO fix bind port 8000 as user
 #USER mat
 
-CMD [ "/usr/local/bin/python", "/backend/mmlp/app.py" ]
+CMD [ "/usr/local/bin/python", "-u", "/backend/mmlp/app.py" ]
