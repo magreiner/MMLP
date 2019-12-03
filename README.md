@@ -5,7 +5,7 @@ This repository contains the prototypical implementation of my Masterthesis in 2
 
 **Platform to Assist Medical Experts in Training, Application, and Control of Machine Learning Models Using Patient Data from a Clinical Information System** 
 
-The full thesis and further information are published in the Heidelberg Document Repository: [HeiDOKs](http://www.ub.uni-heidelberg.de/archiv/27008).
+The full thesis and further information are published in the Heidelberg Document Repository: [HeiDOKs](http://www.ub.uni-heidelberg.de/archiv/27446).
 
 Further changes and developments after July 2019 were performed independently from the Heidelberg University and the DKFZ.
 
@@ -167,4 +167,4 @@ Various containers were helpful during development. Maybe they can be useful for
 * Visdom-Docker
 
 # Evaluation of the prototypical platform
-The platform (as of July 2019) was evaluated by clinical data scientists and medical experts. For details consult the thesis published here: http://www.ub.uni-heidelberg.de/archiv/27008
+The platform (as of July 2019) was evaluated by clinical data scientists and medical experts. For details consult the thesis published here: http://www.ub.uni-heidelberg.de/archiv/27446
