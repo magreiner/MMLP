@@ -12,7 +12,7 @@ python3 app.py
 
 
 ## Ensure Python 3.7 is available
-For ubuntu 18.04 this might help:
+# For ubuntu 18.04 and other debian based systems this might help:
 
 sudo add-apt-repository -y ppa:ubuntu-toolchain-r/ppa
 
