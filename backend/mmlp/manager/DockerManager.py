@@ -10,8 +10,7 @@ from toolz import curry, excepts
 from mmlp import Config
 from mmlp.data import ModelSnapshot, Result
 from mmlp.manager.utils.computeUtils import update_instance_status_rest
-from mmlp.utils.utils import write_to_file, get_timestamp, remove_ansi_escape_tags, write_json_file, \
-    send_email
+from mmlp.utils.utils import write_to_file, get_timestamp, remove_ansi_escape_tags, write_json_file, send_email_config
 
 CONTAINER_RUNNING_STATUSES = ["created", "running"]
 
@@ -203,7 +202,7 @@ class DockerManager:
             if not context.container_image_name.startswith('mon_'):
 
                 # Send Email to inform user
-                send_email(self._config.notification_email_to,
+                send_email_config(self._config,
                            subject=f"Successful Method Analysis Pipeline: {context.id}",
                            body="Congratulations!\n"
                                 "Your method application pipeline succeeded\n"
@@ -222,7 +221,7 @@ class DockerManager:
                            ])
         else:
             context = dataclasses.replace(context, success=False)
-            send_email(self._config.notification_email_to,
+            send_email_config(self._config,
                        subject=f"Failed Method Analysis Pipeline: {context.container_name}",
                        body="Unfortunately, your method analysis pipeline failed.\n"
                             "Check the attached logs to solve the issues.\n"
@@ -311,7 +310,7 @@ class DockerManager:
             if not context.container_image_name.startswith('mon_'):
 
                 # Send Email to inform user
-                send_email(self._config.notification_email_to,
+                send_email_config(self._config,
                            subject=f"Successful Model Training Pipeline: {context.id}",
                            body="Congratulations!\n"
                                 "Your model training pipeline succeeded\n"
@@ -330,7 +329,7 @@ class DockerManager:
                            ])
         else:
             context = dataclasses.replace(context, success=False)
-            send_email(self._config.notification_email_to,
+            send_email_config(self._config,
                        subject=f"Failed Model Training Pipeline: {context.container_name}",
                        body="Unfortunately, your training pipeline failed.\n"
                             "Check the attached logs to solve the issues.\n"

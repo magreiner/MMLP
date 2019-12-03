@@ -14,6 +14,8 @@ from email.mime.text import MIMEText
 import falcon
 import math
 
+from mmlp.Config import Config
+
 
 def max_body(limit):
     def hook(req, resp, resource, params):
@@ -114,15 +116,26 @@ def remove_ansi_escape_tags(string):
     return tags.sub('', string)
 
 
-def send_email(to_address, subject, body, attachments=None, from_address="Default@mailprovider.de"):
+def send_email_config(config: Config, subject: str, body: str, attachments=None):
+    return send_email(to_address=config.email_notification_to,
+                      smtp_address=config.email_notification_smtp_address,
+                      username=config.email_notification_username,
+                      password=config.email_notification_password,
+                      subject=subject,
+                      body=body,
+                      from_address=config.email_notification_from,
+                      attachments=attachments)
+
+
+def send_email(to_address, smtp_address, username, password, subject, body, from_address, attachments=None):
     # Logging
     logger = logging.getLogger('backend.' + __name__)
     logger.info("Sending Email to {}, Subject: {}".format(to_address, subject))
 
     # Authenticate
-    server = smtplib.SMTP_SSL("EMAIL_PROVIDER_ADDRESS", 465)
+    server = smtplib.SMTP_SSL(smtp_address, 465)
     server.ehlo()
-    server.login('USERNAME', 'PASSWORD')
+    server.login(username, password)
 
     # Compose Email
     message = MIMEMultipart("mixed")
