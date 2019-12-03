@@ -20,6 +20,7 @@ services:
       - 8000:8000
     volumes:
       - /data:/data
+      - /tmp:/tmp
       - /var/run/docker.sock:/var/run/docker.sock:ro
 
 # Automatic Certificate Management

@@ -3,7 +3,7 @@ FROM python:3.7
 MAINTAINER Matthias Greiner <Matthias.Greiner@stud.uni-heidelberg.de>
 
 # docker build . -t mmlp_backend
-# docker run -it --name "mmlp_backend" --rm -v /var/run/docker.sock:/var/run/docker.sock -v /data:/data -p 8000:8000 mmlp_backend
+# docker run -it --name "mmlp_backend" --rm -v /var/run/docker.sock:/var/run/docker.sock -v /data:/data -v /tmp:/tmp -p 8000:8000 mmlp_backend
 
 # ensure user with ID 1000 has write access to the data dir
 
