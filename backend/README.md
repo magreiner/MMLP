@@ -9,11 +9,13 @@ python3 app.py
 # This key is used when a model git repo is accessed to authenticate
 
 # Check the config in repo/backend/mmlp/config.py
-
+```
 
 ## Ensure Python 3.7 or higher is available
-# For ubuntu 18.04 and other debian based systems this might help:
 
+### For ubuntu 18.04 and other debian based systems this might help:
+#### Python 3.7 Installation
+```bash
 # Add python 3.7 repository
 sudo apt install -y software-properties-common
 sudo add-apt-repository -y ppa:ubuntu-toolchain-r/ppa
@@ -37,8 +39,10 @@ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && sudo python3.7 get-pi
 sudo pip3.7 install cython virtualenvwrapper pylint
 mkvirtualenv MMLP
 pip3.7 install -r requirements.txt
+```
 
-## Install Python 3.8
+#### Install Python 3.8
+```bash
 # Add python 3.8 repository
 sudo apt install -y software-properties-common
 sudo add-apt-repository -y ppa:deadsnakes/ppa
