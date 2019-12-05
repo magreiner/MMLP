@@ -53,7 +53,7 @@ sudo update-alternatives --config python3
 
 # Quickfix for some issues, this should be resolved in the future
 cd /usr/lib/python3/dist-packages
-sudo ln -s apt_pkg.cpython-36m-x86_64-linux-gnu.so apt_pkg.cpython-37m-x86_64-linux-gnu.so
+sudo ln -s apt_pkg.cpython-36m-x86_64-linux-gnu.so apt_pkg.cpython-38m-x86_64-linux-gnu.so
 
 # Install Pip
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && sudo python3.8 get-pip.py && rm get-pip.py
