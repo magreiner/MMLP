@@ -12,10 +12,10 @@ mccabe==0.6.1
 msgpack==0.5.6
 pylint==2.2.1
 python-mimeparse==1.6.0
-requests==2.20.1
+requests==2.27.1
 six==1.11.0
 typed-ast==1.1.0
-urllib3==1.26.5
+urllib3==1.26.9
 websocket-client==0.54.0
 wrapt==1.10.11
 psutil
