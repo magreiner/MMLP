@@ -38,6 +38,7 @@ class Config(AbstractEntity):
 
     @staticmethod
     def from_dict(  # Set docker registry credentials:
+            # Default registry address: https://index.docker.io/v1
             docker_registry_address="SET_REGISTRY_ADDRESS",
             docker_registry_username="SET_USERNAME",
             docker_registry_password="SET_PASSWORD",
