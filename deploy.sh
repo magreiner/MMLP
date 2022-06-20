@@ -4,7 +4,8 @@
 # check logs with:
 # docker-compose logs -f
 
-set -xe
+# Stop if error occurs
+set -e
 
 # Build containers to include updates
 # "#################################################################################################################"
@@ -18,7 +19,7 @@ docker-compose build --pull
 echo "Deploy MMLP"
 # "#################################################################################################################"
 # Perform a clean shutdown of the Platform, if it is already running
-docker-compose down || True
+docker-compose down || true
 
 # Start the Platform (old data from persistent volumes will be used - delete manually for clean start)
 docker-compose up -d
