@@ -10,20 +10,21 @@ set -xe
 # "#################################################################################################################"
 echo "Build MMLP Components"
 # "#################################################################################################################"
-docker-compose build
-docker-compose pull
-
-# Stop Platform, if it is already running
-docker-compose down || True
+# docker-compose pull
+docker-compose build --pull
 
 # Deploy MMLP
 # "#################################################################################################################"
 echo "Deploy MMLP"
 # "#################################################################################################################"
-docker-compose up
+# Perform a clean shutdown of the Platform, if it is already running
+docker-compose down || True
+
+# Start the Platform (old data from persistent volumes will be used - delete manually for clean start)
+docker-compose up -d
 
 # Show logs
 # "#################################################################################################################"
-echo "Deployment finished showing logs (terminate log monitor with CTRL + C)"
+# echo "Deployment finished showing logs (terminate log monitor with CTRL + C)"
 # "#################################################################################################################"
-#docker-compose logs -f
+# docker-compose logs -f
